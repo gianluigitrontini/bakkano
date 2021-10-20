@@ -9,34 +9,38 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  min-height: 100vh;
+  height: 100%;
+}
+
 html {
   font-family: 'Oswald', sans-serif;
 }
 
 body {
-  @apply pb-4;
+  @apply pb-4 flex flex-col;
+}
+#root {
+  @apply h-full flex-1 flex flex-col;
 }
 
 #hero {
   div:first-child {
     transition: opacity 0.25s ease-in-out;
   }
-  div:last-child {
-    div {
-      background-color: rgba(255, 255, 255, 0.35);
-    }
-  }
+  // div:last-child {
+  //   div {
+  //     background-color: rgba(255, 255, 255, 0.35);
+  //   }
+  // }
 
   h1 {
     line-height: 1.25;
   }
 }
 
-header {
-  height: 80px;
-  position: fixed;
-  top: 0;
-}
 .header-on-scroll {
   @apply fixed top-0 shadow-classic;
 }
@@ -53,8 +57,31 @@ header {
 .absolute-center {
   top: 50%;
   transform: translateY(-50%);
+}
 
+.absolute-center.no-large {
   @screen lg {
     transform: initial;
+  }
+}
+.dashed-background {
+  background-image: url('https://bakkanoinviamanara.com/wp-content/uploads/2015/11/bakkano_head_bg.png');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-color: transparent;
+  //   padding-top: 10px;
+  background-size: 60px 6px;
+}
+
+.animate-zoom-slowly {
+  animation: zoom-in-slowly 5s linear;
+}
+
+@keyframes zoom-in-slowly {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.02);
   }
 }
