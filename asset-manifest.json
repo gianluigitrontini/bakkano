@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7b1ae2e6.chunk.css",
+    "main.js": "/static/js/main.670d7b80.chunk.js",
+    "main.js.map": "/static/js/main.670d7b80.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3535590d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3535590d.js.map",
+    "static/js/2.2ad61966.chunk.js": "/static/js/2.2ad61966.chunk.js",
+    "static/js/2.2ad61966.chunk.js.map": "/static/js/2.2ad61966.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.7b1ae2e6.chunk.css.map": "/static/css/main.7b1ae2e6.chunk.css.map",
+    "static/js/2.2ad61966.chunk.js.LICENSE.txt": "/static/js/2.2ad61966.chunk.js.LICENSE.txt",
+    "static/media/base-pinsa.6f2b2499.png": "/static/media/base-pinsa.6f2b2499.png",
+    "static/media/foto-hamburger.6e5ad0c6.png": "/static/media/foto-hamburger.6e5ad0c6.png",
+    "static/media/foto-impasto.b6584062.png": "/static/media/foto-impasto.b6584062.png",
+    "static/media/foto-pinsa-con-salame.7615e4c7.png": "/static/media/foto-pinsa-con-salame.7615e4c7.png",
+    "static/media/foto-pizza.7d510a3f.png": "/static/media/foto-pizza.7d510a3f.png",
+    "static/media/pinsa-romana-mini.bd49e2aa.png": "/static/media/pinsa-romana-mini.bd49e2aa.png",
+    "static/media/pinsa-romana.fdeeccd5.png": "/static/media/pinsa-romana.fdeeccd5.png",
+    "static/media/index.css": "/static/media/windi_lestari.04d27018.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3535590d.js",
+    "static/js/2.2ad61966.chunk.js",
+    "static/css/main.7b1ae2e6.chunk.css",
+    "static/js/main.670d7b80.chunk.js"
+  ]
+}
