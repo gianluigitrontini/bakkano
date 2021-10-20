@@ -3,7 +3,7 @@
   "proxy": "http://127.0.0.1:5000/",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://gianluigitrontini.github.io/bakkano",
+  "homepage": "https://gianluigitrontini.github.io/bakkano",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@headlessui/react": "^1.4.1",
