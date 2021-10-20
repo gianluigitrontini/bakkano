@@ -10,24 +10,22 @@ import AdminHeader from './components/Admin/Header';
 function App() {
   return (
     <>
-      <Router>
-        <Switch>
-          <Route path='/' exact>
-            <Header />
-            <HeroSection />
-            <BaseSection />
-            <PercheScegliereNoiSection />
-            <ProductsSection />
-          </Route>
-          <Route path='/admin' exact>
-            <AdminHeader />
-          </Route>
-          <Route path='/admin/products' exact>
-            <AdminHeader />
-            <AdminProducts />
-          </Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <Route path='/' exact>
+          <Header />
+          <HeroSection />
+          <BaseSection />
+          <PercheScegliereNoiSection />
+          <ProductsSection />
+        </Route>
+        <Route path='/admin' exact>
+          <AdminHeader />
+        </Route>
+        <Route path='/admin/products' exact>
+          <AdminHeader />
+          <AdminProducts />
+        </Route>
+      </Switch>
     </>
   );
 }
