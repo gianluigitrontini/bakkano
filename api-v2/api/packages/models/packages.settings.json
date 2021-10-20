@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packages",
+  "info": {
+    "name": "Pacchetti",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ATM": {
+      "type": "integer"
+    },
+    "Scatola": {
+      "type": "integer"
+    },
+    "Cartone": {
+      "type": "integer"
+    },
+    "product": {
+      "via": "packages",
+      "model": "products"
+    }
+  }
+}

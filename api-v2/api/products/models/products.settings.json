@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Prodotti",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "weight": {
+      "type": "integer"
+    },
+    "expiration": {
+      "type": "integer"
+    },
+    "cookingTime": {
+      "type": "integer"
+    },
+    "fermentationTime": {
+      "type": "integer"
+    },
+    "isVegan": {
+      "type": "boolean",
+      "default": true
+    },
+    "isGlutenFree": {
+      "type": "boolean",
+      "default": false
+    },
+    "packages": {
+      "via": "product",
+      "collection": "packages"
+    },
+    "styles": {
+      "via": "product",
+      "collection": "styles"
+    }
+  }
+}

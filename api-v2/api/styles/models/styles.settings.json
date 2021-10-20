@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "styles",
+  "info": {
+    "name": "Varianti Prodotto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ingredients": {
+      "type": "string"
+    },
+    "allergens": {
+      "type": "string"
+    },
+    "product": {
+      "via": "styles",
+      "model": "products"
+    }
+  }
+}
