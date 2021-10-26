@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Fade } from 'react-awesome-reveal';
-// import { Link } from 'react-scroll';
-// import FirmaChef from '../../assets/images/firma-chef.png';
-import pinsaConSalame from '../../assets/images/foto-pinsa-con-salame.png';
 import fotoHamburger from '../../assets/images/foto-hamburger.png';
-const pinsa =
-  'https://bakkanoinviamanara.com/wp-content/uploads/2020/01/persito2.jpg';
+import fotoHamburgerConPatatine from '../../assets/images/foto-hamburger-con-patatine.png';
+import fotoPinsaBiancaCondita from '../../assets/images/foto-pinsa-bianca-condita.png';
+import fotoPinsaFarcita from '../../assets/images/pinsa-farcita.jpg';
 
 function HeroSection() {
   const [slideNumber, setSlideNumber] = useState(1);
@@ -15,52 +13,58 @@ function HeroSection() {
       slideId: '1',
       title: 'La Base',
       secondTitle: 'Che fa la differenza',
-      description: '',
-      image: pinsa,
+      description:
+        'Un impasto che abbiamo perfezionato nel tempo con amore e passione. Un prodotto che abbiamo testato personalmente su migliaia di clienti. Tanti formati per ogni esigenza.',
+      image: fotoPinsaFarcita,
     },
     {
       slideId: '2',
-      title: 'Preparala',
-      secondTitle: 'In un attimo',
-      description: '',
-      image: pinsaConSalame,
+      title: 'Il risultato',
+      secondTitle: 'di anni di esperienza',
+      description:
+        'Anno dopo anno ha conquistato i clienti del nostro territorio e oggi, attraverso il nostro laboratorio, prepariamo e distribuiamo la vera Pinsa Romana anche per la tua attività.',
+      image: fotoPinsaBiancaCondita,
     },
     {
       slideId: '3',
+      title: 'Artigianale al 100%',
+      secondTitle: 'E si prepara in un attimo',
+      description: 'ideali per pizzerie, birrerie, ristoranti, bar, alberghi.',
+      image: fotoHamburgerConPatatine,
+    },
+    {
+      slideId: '4',
       title: 'Ingredienti Naturali',
-      secondTitle: 'Che la rendono speciale',
-      description: '',
+      secondTitle: 'Semplici e di altissima qualità',
+      description:
+        'Per prodotti facili da gestire, da farcire come preferisci e che ti permettono di eliminare tempi e costi di lavorazione.',
       image: fotoHamburger,
     },
   ];
 
   const Carousel = ({ carouselData }) => {
     useEffect(() => {
-      // const interval = setInterval(() => {
-      //   if (slideNumber == 3) {
-      //     setSlideNumber(1);
-      //   } else {
-      //     setSlideNumber((slideNumber) => slideNumber + 1);
-      //   }
-      // }, 5000);
-      // return () => clearInterval(interval);
+      const interval = setInterval(() => {
+        if (slideNumber == 3) {
+          setSlideNumber(1);
+        } else {
+          setSlideNumber((slideNumber) => slideNumber + 1);
+        }
+      }, 4500);
+      return () => clearInterval(interval);
     }, []);
 
     return carouselData.map((item) => {
       return (
         <div
           key={`carousel-${item.slideId}`}
-          className={`z-0 overflow-hidden  ${
-            slideNumber.toString() === item.slideId ? 'h-screen' : 'hidden'
-          }`}>
-          <img
-            alt='Una pinsa appena sfornata e tagliata'
-            src={item.image}
-            className={` ${
-              slideNumber.toString() === item.slideId ? 'h-screen' : 'hidden'
-            } animate-zoom-slowly z-0 h-full fixed opacity-100  top-0 left-0 right-0 bottom-0 w-full transition-opacity object-cover`}
-          />
-          <div className='fixed bg-black opacity-50 top-0 right-0 left-0 bottom-0'></div>
+          className={`border-b-4 border-red-500 absolute top-0 bottom-0 left-0 right-0 w-full transition-opacity animate-zoom-slowly overflow-hidden fixed-image-background ${
+            slideNumber.toString() === item.slideId
+              ? 'opacity-100 z-10'
+              : 'opacity-0'
+          }`}
+          style={{ backgroundImage: `url(${item.image})` }}>
+          <div className='absolute bg-black opacity-50 top-0 right-0 left-0 bottom-0'></div>
 
           <div className='h-screen container mx-auto flex items-center w-full'>
             <div className='flex flex-col w-full lg:w-2/3 font-semibold text-white uppercase '>
@@ -69,10 +73,17 @@ function HeroSection() {
                   <span className='block text-5xl lg:text-8xl'>
                     {item.title}
                   </span>
-                  <span className='block text-3xl lg:text-6xl'>
-                    {item.secondTitle}
-                  </span>
-                  {item.description && <p>{item.description}</p>}
+
+                  {item.secondTitle && (
+                    <span className='block text-3xl lg:text-6xl'>
+                      {item.secondTitle}
+                    </span>
+                  )}
+                  {item.description && (
+                    <p className='my-8 w-2/3 font-light text-2xl'>
+                      {item.description}
+                    </p>
+                  )}
                 </div>
               </Fade>
             </div>
@@ -83,23 +94,9 @@ function HeroSection() {
   };
 
   return (
-    <section id='hero' className='flex flex-col relative bg-brand-dark-1'>
-      {/* <img
-        alt='Una pinsa appena sfornata e tagliata'
-        src={pinsa}
-        className='fixed opacity-100 h-screen top-0 left-0 right-0 w-full transition-opacity object-cover bg-no-repeat'
-      />
-      <div className='fixed bg-black opacity-50 top-0 right-0 left-0 bottom-0'></div>
-      <div className='h-screen container mx-auto flex items-center w-full'>
-        <div className=' flex flex-col w-2/3 font-semibold text-white uppercase '>
-          <Fade>
-            <div className='flex flex-col'>
-              <span className='block text-8xl'>La Base</span>
-              <span className='block text-6xl'>Che fa la differenza</span>
-            </div>
-          </Fade>
-        </div>
-      </div> */}
+    <section
+      id='hero'
+      className='flex flex-col relative bg-brand-dark-1 h-screen'>
       <Carousel carouselData={heroCarousel} />
     </section>
   );

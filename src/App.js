@@ -1,11 +1,12 @@
-import Header from './components/Header';
+import Header from './components/Global/Header';
 import HeroSection from './components/Sections/HeroSection';
 import BaseSection from './components/Sections/BaseSection';
 import PercheScegliereNoiSection from './components/Sections/PercheScegliereNoiSection';
 import ProductsSection from './components/Sections/Products/ProductsSection';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import AdminProducts from './components/views/AdminProducts';
 import AdminHeader from './components/Admin/Header';
+import Footer from './components/Global/Footer';
 
 function App() {
   return (
@@ -17,14 +18,15 @@ function App() {
           <BaseSection />
           <PercheScegliereNoiSection />
           <ProductsSection />
+          <Footer />
         </Route>
-        <Route path='/admin' exact>
-          <AdminHeader />
-        </Route>
-        <Route path='/admin/products' exact>
-          <AdminHeader />
-          <AdminProducts />
-        </Route>
+        {/*<Route path='/admin' exact>*/}
+        {/*  <AdminHeader />*/}
+        {/*</Route>*/}
+        {/*<Route path='/admin/products' exact>*/}
+        {/*  <AdminHeader />*/}
+        {/*  <AdminProducts />*/}
+        {/*</Route>*/}
       </Switch>
     </>
   );

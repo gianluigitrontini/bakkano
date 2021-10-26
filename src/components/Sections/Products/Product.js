@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ATMIcon from '../../../assets/images/section-prodotti/icons/atm-icon.png';
 import ScatolaIcon from '../../../assets/images/section-prodotti/icons/scatola-icon.png';
@@ -14,6 +14,14 @@ import Forno from '../../../assets/images/section-prodotti/icons/forno.png';
 import Vegan from '../../../assets/images/section-prodotti/icons/vegan.png';
 
 function Product({ product }) {
+  const [expanded, setExpanded] = useState(
+    new Array(product.style.lenght).fill(0)
+  );
+  const setVariantExpanded = (i) => {
+    let tempExpanded = [...expanded];
+    tempExpanded[i] = !expanded[i];
+    setExpanded(tempExpanded);
+  };
   const handleLievitazioneIcon = () => {
     const icon =
       product.fermentationTime === 12
@@ -27,8 +35,7 @@ function Product({ product }) {
   return (
     <div className='flex flex-col overflow-hidden bg-white rounded-lg border border-gray-200'>
       <img
-        className='object-contain object-center w-full h-72'
-        style={{ transform: 'scale(1.5)' }}
+        className='object-contain object-center w-full h-64'
         src={product.images[0]}
         alt='avatar'
       />
@@ -61,29 +68,31 @@ function Product({ product }) {
           {product.expiration} giorni
         </span>
       </div>
-      <div className='product-content flex flex-col h-full p-4 pt-0'>
+      <div className='product-content flex flex-col p-4 pt-0'>
         {product.style.map((style, i) => {
           return (
-            <div key={`product_style-${i}`} className='my-4'>
-              <div className='flex items-center'>
+            <div
+              key={`product_style-${i}`}
+              className='border-b border-gray-300 hover:border-red-400 transition-all cursor-pointer'>
+              <div
+                className='flex items-center w-full justify-between py-2'
+                onClick={() => setVariantExpanded(i)}>
                 <h1 className='text-xl font-semibold text-gray-800 min-w-150'>
                   {style.name}
                 </h1>
-                <span className='block border-b-4 border-red-500 h-4 w-full'></span>
+                <span className='text-red-600'> {expanded[i] ? '-' : '+'}</span>
               </div>
-
-              <div className='flex flex-col mt-2 text-gray-700'>
+              <div
+                className={`flex flex-col text-gray-700 overflow-hidden ${
+                  expanded[i] ? 'h-auto pt-2 pb-4' : 'h-0'
+                }`}>
                 <h3 className='font-bold'>Ingredienti</h3>
-                <span className='inline-block'>
-                  {style.ingredients.join(', ')}
-                </span>
+                <span className='inline-block'>{style.ingredients}</span>
 
                 {style.allergens && (
                   <>
                     <h3 className='font-bold'>Allergeni</h3>
-                    <span className='inline-block'>
-                      {style.allergens.join(', ')}
-                    </span>
+                    <span className='inline-block'>{style.allergens}</span>
                   </>
                 )}
               </div>
@@ -92,7 +101,7 @@ function Product({ product }) {
         })}
       </div>
       {/* Badges Fermentazione, Tempo e Vegano */}
-      <div className='flex items-end justify-between p-4'>
+      {/* <div className='flex items-end justify-between p-4'>
         <div className='flex flex-col items-center text-center'>
           <img
             src={handleLievitazioneIcon()}
@@ -113,9 +122,9 @@ function Product({ product }) {
             <span className='mt-2'>Prodotto Vegano</span>
           </div>
         )}
-      </div>
+      </div> */}
       {/* Pacchetti e Formati */}
-      <div className='border-t-4 border-dashed border-red-500'>
+      <div className='mt-auto'>
         <table className='text-center w-full mt-2'>
           <thead>
             <tr className='border-b border-gray-100'>
