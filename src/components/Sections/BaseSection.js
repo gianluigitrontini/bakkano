@@ -67,7 +67,7 @@ function BaseSection() {
     <section
       id='la-base'
       className='flex flex-col py-24 bg-brand-dark-1 z-10 relative'>
-      <div className='container'>
+      <div className='container z-10'>
         <div className='w-full flex flex-col gap-16 text-white'>
           <Fade triggerOnce>
             {BaseCopy.map((block, i) => {
@@ -82,10 +82,10 @@ function BaseSection() {
           </Fade>
         </div>
       </div>
-      <img src={BG} className='absolute  top-0 left-0 right-0 w-full' />
+      <img src={BG} className='absolute z-0 top-0 left-0 right-0 w-full' />
       <img
         src={BG}
-        className='absolute  bottom-0 left-0 right-0 w-full'
+        className='absolute z-0 bottom-0 left-0 right-0 w-full'
         style={{ height: '150vh' }}
       />
     </section>
