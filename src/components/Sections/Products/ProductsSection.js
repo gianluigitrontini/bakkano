@@ -13,7 +13,7 @@ const badges = {
 function ProductsSection() {
   const ProductsSectionTitle = ({ title, badge }) => {
     return (
-      <div className='flex flex-col md:flex-row items-center mt-4 mb-12 md:my-0'>
+      <div className='flex flex-col md:flex-row items-center mt-4 mb-12 md:mt-20 md:mb-12'>
         <h3 className='text-5xl text-white uppercase my-8 py-4 border-b-4 mr-auto border-red-500 w-fit-content pr-4'>
           {title}
         </h3>
