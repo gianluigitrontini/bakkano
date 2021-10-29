@@ -10,60 +10,54 @@ import { Fade } from 'react-awesome-reveal';
 
 function PercheScegliereNoiSection() {
   useLayoutEffect(() => {
-    const images = document.querySelectorAll(
-      '.perchenoi_images-container > img'
-    );
-    const blocks = document.querySelectorAll(
-      '.perchenoi_blocks-container > div'
-    );
-
-    blocks[0].addEventListener('mouseenter', () => {
-      images[1].style.opacity = 0.5;
-      images[2].style.opacity = 0.5;
-    });
-
-    blocks[0].addEventListener('mouseleave', () => {
-      images[1].style.opacity = 1;
-      images[2].style.opacity = 1;
-    });
+    // const images = document.querySelectorAll(
+    //   '.perchenoi_images-container > img'
+    // );
+    // const blocks = document.querySelectorAll(
+    //   '.perchenoi_blocks-container > div'
+    // );
+    // blocks[0].addEventListener('mouseenter', () => {
+    //   images[1].style.opacity = 0.5;
+    //   images[2].style.opacity = 0.5;
+    // });
+    // blocks[0].addEventListener('mouseleave', () => {
+    //   images[1].style.opacity = 1;
+    //   images[2].style.opacity = 1;
+    // });
   }, []);
 
   useLayoutEffect(() => {
-    const images = document.querySelectorAll(
-      '.perchenoi_images-container > img'
-    );
-    const blocks = document.querySelectorAll(
-      '.perchenoi_blocks-container > div'
-    );
-
-    blocks[1].addEventListener('mouseenter', () => {
-      images[0].style.opacity = 0.5;
-      images[2].style.opacity = 0.5;
-    });
-
-    blocks[1].addEventListener('mouseleave', () => {
-      images[0].style.opacity = 1;
-      images[2].style.opacity = 1;
-    });
+    // const images = document.querySelectorAll(
+    //   '.perchenoi_images-container > img'
+    // );
+    // const blocks = document.querySelectorAll(
+    //   '.perchenoi_blocks-container > div'
+    // );
+    // blocks[1].addEventListener('mouseenter', () => {
+    //   images[0].style.opacity = 0.5;
+    //   images[2].style.opacity = 0.5;
+    // });
+    // blocks[1].addEventListener('mouseleave', () => {
+    //   images[0].style.opacity = 1;
+    //   images[2].style.opacity = 1;
+    // });
   }, []);
 
   useLayoutEffect(() => {
-    const images = document.querySelectorAll(
-      '.perchenoi_images-container > img'
-    );
-    const blocks = document.querySelectorAll(
-      '.perchenoi_blocks-container > div'
-    );
-
-    blocks[2].addEventListener('mouseenter', () => {
-      images[0].style.opacity = 0.5;
-      images[1].style.opacity = 0.5;
-    });
-
-    blocks[2].addEventListener('mouseleave', () => {
-      images[0].style.opacity = 1;
-      images[1].style.opacity = 1;
-    });
+    // const images = document.querySelectorAll(
+    //   '.perchenoi_images-container > img'
+    // );
+    // const blocks = document.querySelectorAll(
+    //   '.perchenoi_blocks-container > div'
+    // );
+    // blocks[2].addEventListener('mouseenter', () => {
+    //   images[0].style.opacity = 0.5;
+    //   images[1].style.opacity = 0.5;
+    // });
+    // blocks[2].addEventListener('mouseleave', () => {
+    //   images[0].style.opacity = 1;
+    //   images[1].style.opacity = 1;
+    // });
   }, []);
 
   const whyOurProducts = [
@@ -107,35 +101,20 @@ function PercheScegliereNoiSection() {
         <span className='block border-b-4 border-red-500 h-4 w-4/12'></span>
       </div>
       <div className='container flex flex-col lg:flex-row items-center mt-16 lg:mt-24'>
-        <div className='perchenoi_images-container w-full lg:w-1/2 h-full grid grid-cols-2 grid-rows-2 gap-8 lg:pr-8'>
-          <img
-            src='https://www.pinsaromana.info/wp-content/uploads/bfi_thumb/lavorazione-impasto-pizza-llwyjy8ifrn9110baqojojbzmzx1p0fnn42lax5nzs.jpg'
-            className='col-span-2 h-72 w-full overflow-hidden rounded object-cover w-full object-center shadow-md transition-opacity'
-            alt=''
-          />
-          <img
-            src={Pizza}
-            className='col-span-1 h-72 overflow-hidden w-full rounded object-cover object-center shadow-md transition-opacity'
-            alt=''
-          />
-          <img
-            src={ImpastoNelForno}
-            className='col-span-1 h-72 overflow-hidden rounded object-cover w-full object-left shadow-md transition-opacity'
-            alt=''
-          />
-        </div>
         <div className='perchenoi_blocks-container flex flex-col my-4 lg:w-1/2 text-white'>
           <Fade triggerOnce>
             {whyOurProducts.map((block, i) => {
               return (
                 <BlockWithIcon
-                  className='border-4 border-transparent border-dashed hover:border-red-200 my-2 p-4 transition-all'
+                  className='my-2 p-4 transition-all'
                   changeOnMobile
                   key={'perchenoi-' + i}
                   icon={block.icon}
                   title={block.title}>
                   {block.text.map((sentence, i) => (
-                    <p className='my-2 text-xl' key={'sentence-' + i}>
+                    <p
+                      className='my-2 text-xl text-paragraph'
+                      key={'sentence-' + i}>
                       &mdash; &nbsp;
                       {sentence}
                     </p>

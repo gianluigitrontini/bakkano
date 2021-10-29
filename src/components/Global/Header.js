@@ -8,27 +8,10 @@ function Header() {
       const header = document.querySelector('header');
       document.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-          header.classList.add(
-            'bg-brand-dark-1',
-            'bg-opacity-75',
-            'backdrop-blur',
-            'border-white'
-          );
+          header.classList.add('header-on-scroll');
         } else {
-          if (
-            header.classList.contains(
-              'bg-brand-dark-1',
-              'bg-opacity-75',
-              'backdrop-blur',
-              'border-white'
-            )
-          ) {
-            header.classList.remove(
-              'bg-brand-dark-1',
-              'bg-opacity-75',
-              'backdrop-blur',
-              'border-white'
-            );
+          if (header.classList.contains('header-on-scroll')) {
+            header.classList.remove('header-on-scroll');
           }
         }
       });
@@ -45,12 +28,12 @@ function Header() {
               to='i-nostri-prodotti'
               smooth={true}
               offset={-50}
-              className='mr-2 tracking-wide cursor-pointer'>
+              className='text-span mr-2 tracking-wide cursor-pointer'>
               I nostri prodotti
             </Link>
             <Link
               to='#'
-              className='ml-2 px-4 py-2 bg-red-600 hover:bg-red-700 cursor-pointer tracking-wide transition-colors duration-200 transform text-white focus:outline-none focus:bg-red-500'>
+              className='text-span ml-2 px-4 py-2 bg-red-600 hover:bg-red-700 cursor-pointer tracking-wide transition-colors duration-200 transform text-white focus:outline-none focus:bg-red-500'>
               Acquista
             </Link>
           </ul>

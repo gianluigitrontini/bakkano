@@ -9,33 +9,40 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  min-height: 100vh;
-}
-
 html {
   font-family: 'Oswald', sans-serif;
   overflow-y: scroll;
 }
 
-body {
-  @apply flex flex-col bg-brand-dark-1;
-  overflow-y: hidden;
+.container {
+  @screen xl {
+    @apply px-8 #{!important};
+    max-width: 1196px !important;
+  }
+
+  @screen 2xl {
+    @apply px-12 #{!important};
+    max-width: 1536px !important;
+  }
 }
-#root {
-  @apply h-full flex-1 flex flex-col;
-}
+
+// html,
+// body {
+//   min-height: 100vh;
+// }
+
+// body {
+//   @apply flex flex-col bg-brand-dark-1;
+//   overflow-y: hidden;
+// }
+// #root {
+//   @apply h-full flex-1 flex flex-col;
+// }
 
 #hero {
   div:first-child {
     transition: opacity 0.25s ease-in-out;
   }
-  // div:last-child {
-  //   div {
-  //     background-color: rgba(255, 255, 255, 0.35);
-  //   }
-  // }
 
   h1 {
     line-height: 1.25;
@@ -43,7 +50,13 @@ body {
 }
 
 .header-on-scroll {
-  @apply fixed top-0 shadow-classic;
+  @apply bg-brand-dark-1 bg-opacity-75 backdrop-blur border-white;
+}
+
+@supports (-moz-appearance: none) {
+  .header-on-scroll {
+    @apply bg-brand-dark-1 opacity-100;
+  }
 }
 .mt-header {
   margin-top: 80px;
@@ -74,24 +87,51 @@ body {
   background-size: 60px 6px;
 }
 
-.animate-zoom-slowly {
+// .animate-zoom-slowly {
+//   @screen lg {
+//     animation: zoom-in-slowly 5s linear;
+//   }
+// }
+
+// @keyframes zoom-in-slowly {
+//   0% {
+//     background-size: 100%;
+//   }
+//   100% {
+//     background-size: 105%;
+//   }
+// }
+
+@supports (-webkit-touch-callout: none) {
+  .fixed-image-background {
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@supports not (-webkit-touch-callout: none) {
+  .fixed-image-background {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.text-heading {
+  font-size: 28px;
   @screen lg {
-    animation: zoom-in-slowly 5s linear;
+    font-size: 36px;
   }
 }
-
-@keyframes zoom-in-slowly {
-  0% {
-    background-size: 100%;
-  }
-  100% {
-    background-size: 105%;
+.text-paragraph {
+  font-size: 16px;
+  @screen lg {
+    font-size: 20px;
   }
 }
-
-.fixed-image-background {
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.text-span {
+  font-size: 14px;
 }

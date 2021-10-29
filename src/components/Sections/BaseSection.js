@@ -1,5 +1,4 @@
 import React from 'react';
-import BasePinza from '../../assets/images/section-base/base-pinsa.png';
 import ZeroConservanti from '../../assets/images/section-base/icons/0-conservanti.png';
 import IngredientiCertificati from '../../assets/images/section-base/icons/certified.png';
 import FattaAMano from '../../assets/images/section-base/icons/fatta-a-mano.png';
@@ -13,22 +12,29 @@ function BaseSection() {
       return (
         <img
           src='https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640'
-          className={`object-cover h-44 lg:w-1/2 ${
+          className={`object-cover lg:w-2/3 ${
             isSecond && 'order-1 lg:order-2'
           }`}
+          style={{ maxHeight: '450px' }}
           alt={block.title}
         />
       );
     };
     return (
-      <div className='flex flex-col lg:flex-row items-center gap-8' key={i}>
-        {i % 2 === 0 && <Image />}
-        <div className='lg:w-1/2 order-2 lg:order-1'>
+      <div
+        className='flex flex-col lg:flex-row items-center gap-8 w-full'
+        key={i}>
+        {i % 2 === 1 && <Image />}
+        <div className='lg:w-1/3 order-2 lg:order-1'>
           <img src={block.icon} className='h-16 mb-8' alt={block.title} />
-          <span className='block font-bold text-3xl'>{block.title}</span>
-          <span className='block text-xl tracking-wide'>{block.text}</span>
+          <span className='block font-bold text-heading text-3xl'>
+            {block.title}
+          </span>
+          <span className='block text-paragraph text-xl tracking-wide'>
+            {block.text}
+          </span>
         </div>
-        {i % 2 === 1 && <Image isSecond />}
+        {i % 2 === 0 && <Image isSecond />}
       </div>
     );
   };
@@ -56,31 +62,20 @@ function BaseSection() {
     },
   ];
   return (
-    <section id='la-base' className='flex flex-col mt-16 bg-brand-dark-1 z-10'>
+    <section id='la-base' className='flex flex-col py-24 bg-brand-dark-1 z-10'>
       <div className='container'>
-        <div className='flex flex-col lg:flex-row'>
-          <div className='w-full flex flex-col gap-32 text-white'>
-            <Fade triggerOnce>
-              {BaseCopy.map((block, i) => {
-                return (
-                  <ImageWithTextBlocks
-                    block={block}
-                    key={`image-with-text_${i}`}
-                    i={i}
-                  />
-                );
-              })}
-            </Fade>
-          </div>
-          {/*<img*/}
-          {/*  src={BasePinza}*/}
-          {/*  style={{*/}
-          {/*    height: '70vh',*/}
-          {/*    minHeight: '600px',*/}
-          {/*  }}*/}
-          {/*  alt=''*/}
-          {/*  className='ml-auto lg:absolute right-0 w-full lg:w-6/12 object-cover opacity-50 hover:opacity-75 transition-opacity'*/}
-          {/*/>*/}
+        <div className='w-full flex flex-col gap-16 text-white'>
+          <Fade triggerOnce>
+            {BaseCopy.map((block, i) => {
+              return (
+                <ImageWithTextBlocks
+                  block={block}
+                  key={`image-with-text_${i}`}
+                  i={i}
+                />
+              );
+            })}
+          </Fade>
         </div>
       </div>
     </section>

@@ -1,13 +1,24 @@
 import React from 'react';
 import Product from './Product';
 import data from '../../../data.js';
+import Badge from './Badge';
+
+const badges = {
+  pinsePinsotto: ['vegan', '72', 'cottura5'],
+  senzaGlutine: ['24', 'vegan', 'cottura5'],
+  teglie: ['72', 'vegan'],
+  hamburgerPane: ['12'],
+};
 
 function ProductsSection() {
-  const ProductsSectionTitle = ({ title }) => {
+  const ProductsSectionTitle = ({ title, badge }) => {
     return (
-      <h3 className='text-5xl text-white uppercase my-8 py-4 border-b-4 mr-auto border-red-500 w-fit-content pr-4'>
-        {title}
-      </h3>
+      <div className='flex flex-col md:flex-row items-center mt-4 mb-12 md:my-0'>
+        <h3 className='text-5xl text-white uppercase my-8 py-4 border-b-4 mr-auto border-red-500 w-fit-content pr-4'>
+          {title}
+        </h3>
+        {badge && <Badge badge={badge} />}
+      </div>
     );
   };
   return (
@@ -27,7 +38,7 @@ function ProductsSection() {
           teglia e in pala, l’hamburger e il pane in cassetta.
         </p>
 
-        <ProductsSectionTitle title='Le Pinse' />
+        <ProductsSectionTitle title='Le Pinse' badge={badges.pinsePinsotto} />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
           {data.products
             .filter((item) => item.category === 'pinsa')
@@ -36,7 +47,7 @@ function ProductsSection() {
             })}
         </div>
 
-        <ProductsSectionTitle title='I Pinsotti' />
+        <ProductsSectionTitle title='I Pinsotti' badge={badges.pinsePinsotto} />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
           {data.products
             .filter((item) => item.category === 'pinsotti')
@@ -45,7 +56,10 @@ function ProductsSection() {
             })}
         </div>
 
-        <ProductsSectionTitle title='I Senza Glutine' />
+        <ProductsSectionTitle
+          title='I Senza Glutine'
+          badge={badges.senzaGlutine}
+        />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
           {data.products
             .filter((item) => item.category === 'senzaGlutine')
@@ -54,7 +68,7 @@ function ProductsSection() {
             })}
         </div>
 
-        <ProductsSectionTitle title='Le Teglie' />
+        <ProductsSectionTitle title='Le Teglie' badge={badges.teglie} />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
           {data.products
             .filter((item) => item.category === 'teglie')
@@ -63,7 +77,10 @@ function ProductsSection() {
             })}
         </div>
 
-        <ProductsSectionTitle title='Gli Hamburgers' />
+        <ProductsSectionTitle
+          title='Gli Hamburgers'
+          badge={badges.hamburgerPane}
+        />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
           {data.products
             .filter((item) => item.category === 'hamburgers')
@@ -72,7 +89,7 @@ function ProductsSection() {
             })}
         </div>
 
-        <ProductsSectionTitle title='Il Pane' />
+        <ProductsSectionTitle title='Il Pane' badge={badges.hamburgerPane} />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
           {data.products
             .filter((item) => item.category === 'pane')
