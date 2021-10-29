@@ -6,6 +6,8 @@ import MixFarine from '../../assets/images/section-base/icons/mix-farine.png';
 
 import { Fade } from 'react-awesome-reveal';
 
+import BG from '../../assets/images/section-base/svg-bg-2.png';
+
 function BaseSection() {
   const ImageWithTextBlocks = ({ block, i }) => {
     const Image = ({ isSecond }) => {
@@ -62,7 +64,9 @@ function BaseSection() {
     },
   ];
   return (
-    <section id='la-base' className='flex flex-col py-24 bg-brand-dark-1 z-10'>
+    <section
+      id='la-base'
+      className='flex flex-col py-24 bg-brand-dark-1 z-10 relative'>
       <div className='container'>
         <div className='w-full flex flex-col gap-16 text-white'>
           <Fade triggerOnce>
@@ -78,6 +82,12 @@ function BaseSection() {
           </Fade>
         </div>
       </div>
+      <img src={BG} className='absolute  top-0 left-0 right-0 w-full' />
+      <img
+        src={BG}
+        className='absolute  bottom-0 left-0 right-0 w-full'
+        style={{ height: '150vh' }}
+      />
     </section>
   );
 }

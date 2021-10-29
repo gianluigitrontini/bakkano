@@ -8,7 +8,7 @@ import Forno from '../../../assets/images/section-prodotti/icons/forno.png';
 function Badge({ badge }) {
   return (
     <div className='flex items-center gap-x-8'>
-      <img src={Fresh} className='w-12' alt='Prodotto Fresco' />
+      <img src={Fresh} className='w-14' alt='Prodotto Fresco' />
 
       {badge.includes('12') && (
         <img
