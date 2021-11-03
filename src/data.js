@@ -460,5 +460,9 @@ const data = {
       ],
     },
   ],
+  users: [
+    { id: 1, email: 'me@admin.it', password: '123456', isAdmin: true },
+    { id: 2, email: 'me@cliente.it', password: '123456', isAdmin: false },
+  ],
 };
 export default data;

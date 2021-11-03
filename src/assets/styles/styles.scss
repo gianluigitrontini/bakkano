@@ -11,7 +11,7 @@
 
 html {
   font-family: 'Oswald', sans-serif;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .container {
@@ -26,18 +26,18 @@ html {
   }
 }
 
-// html,
-// body {
-//   min-height: 100vh;
-// }
+html,
+body,
+#root {
+  min-height: 100vh;
+}
 
-// body {
-//   @apply flex flex-col bg-brand-dark-1;
-//   overflow-y: hidden;
-// }
-// #root {
-//   @apply h-full flex-1 flex flex-col;
-// }
+body {
+  @apply flex flex-col bg-brand-dark-1;
+}
+#root {
+  @apply flex flex-col;
+}
 
 #hero {
   div:first-child {

@@ -82,11 +82,16 @@ function BaseSection() {
           </Fade>
         </div>
       </div>
-      <img src={BG} className='absolute z-0 top-0 left-0 right-0 w-full' />
+      <img
+        src={BG}
+        className='absolute z-0 top-0 left-0 right-0 w-full'
+        alt=''
+      />
       <img
         src={BG}
         className='absolute z-0 bottom-0 left-0 right-0 w-full'
         style={{ height: '150vh' }}
+        alt=''
       />
     </section>
   );

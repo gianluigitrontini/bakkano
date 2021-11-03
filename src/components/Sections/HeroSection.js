@@ -45,7 +45,7 @@ function HeroSection() {
   const Carousel = ({ carouselData }) => {
     useEffect(() => {
       const interval = setInterval(() => {
-        if (slideNumber == 3) {
+        if (slideNumber === 3) {
           setSlideNumber(1);
         } else {
           setSlideNumber((slideNumber) => slideNumber + 1);

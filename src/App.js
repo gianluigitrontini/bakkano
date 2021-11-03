@@ -1,24 +1,18 @@
-import Header from './components/Global/Header';
-import HeroSection from './components/Sections/HeroSection';
-import BaseSection from './components/Sections/BaseSection';
-import PercheScegliereNoiSection from './components/Sections/PercheScegliereNoiSection';
-import ProductsSection from './components/Sections/Products/ProductsSection';
 import { Switch, Route } from 'react-router-dom';
-import AdminProducts from './components/views/AdminProducts';
-import AdminHeader from './components/Admin/Header';
-import Footer from './components/Global/Footer';
+import AuthView from './views/AuthView';
+// import AdminProducts from './components/views/AdminProducts';
+// import AdminHeader from './components/Admin/Header';
+import LandingView from './views/LandingView';
 
 function App() {
   return (
     <>
       <Switch>
         <Route path='/' exact>
-          <Header />
-          <HeroSection />
-          <BaseSection />
-          <PercheScegliereNoiSection />
-          <ProductsSection />
-          <Footer />
+          <LandingView />
+        </Route>
+        <Route path='/login' exact>
+          <AuthView />
         </Route>
         {/*<Route path='/admin' exact>*/}
         {/*  <AdminHeader />*/}

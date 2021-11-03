@@ -7,11 +7,6 @@ import SGIcon from '../../../assets/images/section-prodotti/icons/gluten-free.pn
 import Dimensioni from '../../../assets/images/section-prodotti/icons/dimensioni.png';
 import Peso from '../../../assets/images/section-prodotti/icons/peso.png';
 import Scadenza from '../../../assets/images/section-prodotti/icons/scadenza.png';
-import Lievitazione12 from '../../../assets/images/section-prodotti/icons/lievitazione-12.png';
-import Lievitazione24 from '../../../assets/images/section-prodotti/icons/lievitazione-24.png';
-import Lievitazione72 from '../../../assets/images/section-prodotti/icons/lievitazione-72.png';
-import Forno from '../../../assets/images/section-prodotti/icons/forno.png';
-import Vegan from '../../../assets/images/section-prodotti/icons/vegan.png';
 
 function Product({ product }) {
   const [expanded, setExpanded] = useState(
@@ -21,15 +16,6 @@ function Product({ product }) {
     let tempExpanded = [...expanded];
     tempExpanded[i] = !expanded[i];
     setExpanded(tempExpanded);
-  };
-  const handleLievitazioneIcon = () => {
-    const icon =
-      product.fermentationTime === 12
-        ? Lievitazione12
-        : product.fermentationTime === 24
-        ? Lievitazione24
-        : Lievitazione72;
-    return icon;
   };
 
   return (

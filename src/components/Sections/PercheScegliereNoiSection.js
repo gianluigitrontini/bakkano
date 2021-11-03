@@ -3,8 +3,8 @@ import BlockWithIcon from '../BlockWithIcon';
 import Artigianale from '../../assets/images/section-perche-noi/icons/artigianali.png';
 import Vantaggi from '../../assets/images/section-perche-noi/icons/vantaggi.png';
 import Versatile from '../../assets/images/section-perche-noi/icons/versatile.png';
-import ImpastoNelForno from '../../assets/images/section-perche-noi/foto-impasto.png';
-import Pizza from '../../assets/images/section-perche-noi/foto-pizza.png';
+// import ImpastoNelForno from '../../assets/images/section-perche-noi/foto-impasto.png';
+// import Pizza from '../../assets/images/section-perche-noi/foto-pizza.png';
 
 import { Fade } from 'react-awesome-reveal';
 
