@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/bakkano/static/css/main.b759b5c2.chunk.css",
-    "main.js": "/bakkano/static/js/main.b92d9b2a.chunk.js",
-    "main.js.map": "/bakkano/static/js/main.b92d9b2a.chunk.js.map",
+    "main.css": "/bakkano/static/css/main.2e685249.chunk.css",
+    "main.js": "/bakkano/static/js/main.ed2bbb4c.chunk.js",
+    "main.js.map": "/bakkano/static/js/main.ed2bbb4c.chunk.js.map",
     "runtime-main.js": "/bakkano/static/js/runtime-main.b9091641.js",
     "runtime-main.js.map": "/bakkano/static/js/runtime-main.b9091641.js.map",
     "static/js/2.4a9e9d30.chunk.js": "/bakkano/static/js/2.4a9e9d30.chunk.js",
     "static/js/2.4a9e9d30.chunk.js.map": "/bakkano/static/js/2.4a9e9d30.chunk.js.map",
     "index.html": "/bakkano/index.html",
-    "static/css/main.b759b5c2.chunk.css.map": "/bakkano/static/css/main.b759b5c2.chunk.css.map",
+    "static/css/main.2e685249.chunk.css.map": "/bakkano/static/css/main.2e685249.chunk.css.map",
     "static/js/2.4a9e9d30.chunk.js.LICENSE.txt": "/bakkano/static/js/2.4a9e9d30.chunk.js.LICENSE.txt",
     "static/media/foto-hamburger-con-patatine.396b3b6a.png": "/bakkano/static/media/foto-hamburger-con-patatine.396b3b6a.png",
     "static/media/foto-hamburger.6e5ad0c6.png": "/bakkano/static/media/foto-hamburger.6e5ad0c6.png",
+    "static/media/foto-impasto.b6584062.png": "/bakkano/static/media/foto-impasto.b6584062.png",
     "static/media/foto-pinsa-bianca-condita.d1517bb7.png": "/bakkano/static/media/foto-pinsa-bianca-condita.d1517bb7.png",
+    "static/media/foto-pizza.7d510a3f.png": "/bakkano/static/media/foto-pizza.7d510a3f.png",
     "static/media/hamburger-mini.15799cb4.png": "/bakkano/static/media/hamburger-mini.15799cb4.png",
     "static/media/hamburger.0f242513.png": "/bakkano/static/media/hamburger.0f242513.png",
     "static/media/pane-in-cassetta-1kg.90b9494c.png": "/bakkano/static/media/pane-in-cassetta-1kg.90b9494c.png",
@@ -33,7 +35,7 @@
   "entrypoints": [
     "static/js/runtime-main.b9091641.js",
     "static/js/2.4a9e9d30.chunk.js",
-    "static/css/main.b759b5c2.chunk.css",
-    "static/js/main.b92d9b2a.chunk.js"
+    "static/css/main.2e685249.chunk.css",
+    "static/js/main.ed2bbb4c.chunk.js"
   ]
 }
