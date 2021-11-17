@@ -54,7 +54,7 @@ function PercheScegliereNoiSection() {
             minHeight: '350px',
             height: '350px',
           }}
-          className='bg-fixed w-full bg-no-repeat bg-center bg-cover flex flex-col relative'>
+          className='fixed-image-background w-full bg-no-repeat bg-center flex flex-col relative'>
           <div className='overlay absolute top-0 bottom-0 right-0 left-0 bg-black w-full opacity-25'></div>
           <div className='container z-10 flex flex-col mt-auto'>
             <h3 className='text-4xl lg:text-6xl mb-4 text-white tracking-wide font-bold'>
