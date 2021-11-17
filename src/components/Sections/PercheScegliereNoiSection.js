@@ -3,65 +3,15 @@ import BlockWithIcon from '../BlockWithIcon';
 import Artigianale from '../../assets/images/section-perche-noi/icons/artigianali.png';
 import Vantaggi from '../../assets/images/section-perche-noi/icons/vantaggi.png';
 import Versatile from '../../assets/images/section-perche-noi/icons/versatile.png';
-// import ImpastoNelForno from '../../assets/images/section-perche-noi/foto-impasto.png';
-// import Pizza from '../../assets/images/section-perche-noi/foto-pizza.png';
+import ImpastoNelForno from '../../assets/images/section-perche-noi/foto-impasto.png';
+import Pizza from '../../assets/images/section-perche-noi/foto-pizza.png';
 
 import { Fade } from 'react-awesome-reveal';
 
 function PercheScegliereNoiSection() {
-  useLayoutEffect(() => {
-    // const images = document.querySelectorAll(
-    //   '.perchenoi_images-container > img'
-    // );
-    // const blocks = document.querySelectorAll(
-    //   '.perchenoi_blocks-container > div'
-    // );
-    // blocks[0].addEventListener('mouseenter', () => {
-    //   images[1].style.opacity = 0.5;
-    //   images[2].style.opacity = 0.5;
-    // });
-    // blocks[0].addEventListener('mouseleave', () => {
-    //   images[1].style.opacity = 1;
-    //   images[2].style.opacity = 1;
-    // });
-  }, []);
-
-  useLayoutEffect(() => {
-    // const images = document.querySelectorAll(
-    //   '.perchenoi_images-container > img'
-    // );
-    // const blocks = document.querySelectorAll(
-    //   '.perchenoi_blocks-container > div'
-    // );
-    // blocks[1].addEventListener('mouseenter', () => {
-    //   images[0].style.opacity = 0.5;
-    //   images[2].style.opacity = 0.5;
-    // });
-    // blocks[1].addEventListener('mouseleave', () => {
-    //   images[0].style.opacity = 1;
-    //   images[2].style.opacity = 1;
-    // });
-  }, []);
-
-  useLayoutEffect(() => {
-    // const images = document.querySelectorAll(
-    //   '.perchenoi_images-container > img'
-    // );
-    // const blocks = document.querySelectorAll(
-    //   '.perchenoi_blocks-container > div'
-    // );
-    // blocks[2].addEventListener('mouseenter', () => {
-    //   images[0].style.opacity = 0.5;
-    //   images[1].style.opacity = 0.5;
-    // });
-    // blocks[2].addEventListener('mouseleave', () => {
-    //   images[0].style.opacity = 1;
-    //   images[1].style.opacity = 1;
-    // });
-  }, []);
-
   const whyOurProducts = [
     {
+      image: ImpastoNelForno,
       title: '100% Artigianali & Made in Italy',
       icon: Artigianale,
       text: [
@@ -71,6 +21,8 @@ function PercheScegliereNoiSection() {
       ],
     },
     {
+      image:
+        'https://bakkanoinviamanara.com/wp-content/uploads/2016/11/DSC_0499.jpg',
       title: 'Versatile e pronta in 5 minuti',
       icon: Versatile,
       text: [
@@ -80,7 +32,9 @@ function PercheScegliereNoiSection() {
       ],
     },
     {
-      title: 'Al tuo locale permette di',
+      image:
+        'https://www.pinsaromana.info/wp-content/uploads/2016/04/12963579_643124025834828_5970183526235300590_n-new.jpg',
+      title: 'Tanti vantaggi per il tuo locale',
       icon: Vantaggi,
       text: [
         'Offrire un prodotto di alta qualità senza assumere un pizzaiolo professionista',
@@ -90,6 +44,30 @@ function PercheScegliereNoiSection() {
       ],
     },
   ];
+
+  const BlockWithBackgroundImage = ({ image, title, children }) => {
+    return (
+      <div className='flex flex-col mb-16'>
+        <div
+          style={{
+            backgroundImage: `url(${image})`,
+            minHeight: '350px',
+            height: '350px',
+          }}
+          className='bg-fixed w-full bg-no-repeat bg-center bg-cover flex flex-col relative'>
+          <div className='overlay absolute top-0 bottom-0 right-0 left-0 bg-black w-full opacity-25'></div>
+          <div className='container z-10 flex flex-col mt-auto'>
+            <h3 className='text-4xl lg:text-6xl mb-4 text-white tracking-wide font-bold'>
+              {title}
+            </h3>
+          </div>
+        </div>
+        <div className='container flex-col lg:flex-row flex gap-32 my-16 text-center'>
+          {children}
+        </div>
+      </div>
+    );
+  };
   return (
     <section
       id='perche-scegliere-noi'
@@ -100,26 +78,25 @@ function PercheScegliereNoiSection() {
         </h1>
         <span className='block border-b-4 border-red-500 h-4 w-4/12'></span>
       </div>
-      <div className='container flex flex-col lg:flex-row items-center mt-16 lg:mt-24'>
-        <div className='perchenoi_blocks-container flex flex-col my-4 lg:w-1/2 text-white'>
+      <div className='flex flex-col lg:flex-row items-center mt-16 lg:mt-24'>
+        <div className='perchenoi_blocks-container flex flex-col gap-16 my-4 text-white w-full'>
           <Fade triggerOnce>
             {whyOurProducts.map((block, i) => {
               return (
-                <BlockWithIcon
-                  className='my-2 p-4 transition-all'
-                  changeOnMobile
-                  key={'perchenoi-' + i}
-                  icon={block.icon}
+                <BlockWithBackgroundImage
+                  image={block.image}
                   title={block.title}>
                   {block.text.map((sentence, i) => (
-                    <p
-                      className='my-2 text-xl text-paragraph'
+                    <div
+                      className={`lg:w-1/${block.text.length} transform translate-y-2/4 relative my-2 text-2xl border-4 border-red-500 text-white p-4 flex items-center justify-center`}
                       key={'sentence-' + i}>
-                      &mdash; &nbsp;
                       {sentence}
-                    </p>
+                      <span className='absolute font-bold left-0 top-0 transform -translate-x-2/4 -translate-y-2/4 text-6xl'>
+                        {i + 1}
+                      </span>
+                    </div>
                   ))}
-                </BlockWithIcon>
+                </BlockWithBackgroundImage>
               );
             })}
           </Fade>
