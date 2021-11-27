@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import fotoHamburger from '../../assets/images/foto-hamburger.png';
-import fotoHamburgerConPatatine from '../../assets/images/foto-hamburger-con-patatine.png';
-import fotoPinsaBiancaCondita from '../../assets/images/foto-pinsa-bianca-condita.png';
-import fotoPinsaFarcita from '../../assets/images/pinsa-farcita.jpg';
+// import fotoHamburger from '../../assets/images/foto-hamburger.png';
+import fotoHamburger from '../../assets/images/hero-hamburger.jpg';
+import fotoHamburgerConPatatine from '../../assets/images/hero-hamburger-1.jpg';
+import fotoPinsaBiancaCondita from '../../assets/images/hero-pinsa-farcita.jpg';
+import fotoPinsaFarcita from '../../assets/images/hero-pinsa-farcita-1.jpg';
 
 function HeroSection() {
   const [slideNumber, setSlideNumber] = useState(1);
@@ -45,7 +46,7 @@ function HeroSection() {
   const Carousel = ({ carouselData }) => {
     useEffect(() => {
       const interval = setInterval(() => {
-        if (slideNumber === 3) {
+        if (slideNumber === 4) {
           setSlideNumber(1);
         } else {
           setSlideNumber((slideNumber) => slideNumber + 1);

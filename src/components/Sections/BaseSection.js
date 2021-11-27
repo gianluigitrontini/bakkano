@@ -6,14 +6,16 @@ import MixFarine from '../../assets/images/section-base/icons/mix-farine.png';
 
 import { Fade } from 'react-awesome-reveal';
 
-import BG from '../../assets/images/section-base/svg-bg-2.png';
+// import BG from '../../assets/images/section-base/svg-bg-2.png';
+import BG from '../../assets/images/section-base/bg-bakkano-abstract.svg';
+import PlaceholderImage from '../../assets/images/section-base/placeholder-image.png';
 
 function BaseSection() {
   const ImageWithTextBlocks = ({ block, i }) => {
     const Image = ({ isSecond }) => {
       return (
         <img
-          src='https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640'
+          src={PlaceholderImage}
           className={`object-cover lg:w-2/3 ${
             isSecond && 'order-1 lg:order-2'
           }`}
@@ -89,7 +91,7 @@ function BaseSection() {
       />
       <img
         src={BG}
-        className='absolute z-0 bottom-0 left-0 right-0 w-full'
+        className='absolute z-0 bottom-0 right-0 w-full object-contain object-right'
         style={{ height: '150vh' }}
         alt=''
       />

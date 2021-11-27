@@ -1,10 +1,10 @@
-import React, { useLayoutEffect } from 'react';
-import BlockWithIcon from '../BlockWithIcon';
+import React from 'react';
 import Artigianale from '../../assets/images/section-perche-noi/icons/artigianali.png';
 import Vantaggi from '../../assets/images/section-perche-noi/icons/vantaggi.png';
 import Versatile from '../../assets/images/section-perche-noi/icons/versatile.png';
-import ImpastoNelForno from '../../assets/images/section-perche-noi/foto-impasto.png';
-import Pizza from '../../assets/images/section-perche-noi/foto-pizza.png';
+import ImpastoNelForno from '../../assets/images/section-perche-noi/foto-impasto.jpg';
+import FotoPinsaCondita from '../../assets/images/section-perche-noi/foto-pinsa-condita-2.jpg';
+import FotoLocale from '../../assets/images/section-perche-noi/foto-locale.jpg';
 
 import { Fade } from 'react-awesome-reveal';
 
@@ -21,8 +21,7 @@ function PercheScegliereNoiSection() {
       ],
     },
     {
-      image:
-        'https://bakkanoinviamanara.com/wp-content/uploads/2016/11/DSC_0499.jpg',
+      image: FotoPinsaCondita,
       title: 'Versatile e pronta in 5 minuti',
       icon: Versatile,
       text: [
@@ -32,8 +31,7 @@ function PercheScegliereNoiSection() {
       ],
     },
     {
-      image:
-        'https://www.pinsaromana.info/wp-content/uploads/2016/04/12963579_643124025834828_5970183526235300590_n-new.jpg',
+      image: FotoLocale,
       title: 'Tanti vantaggi per il tuo locale',
       icon: Vantaggi,
       text: [
