@@ -9,10 +9,14 @@ function Header() {
       document.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
           header.classList.remove('bg-transparent');
-          header.classList.add('bg-brand-dark-1', 'border-red-500');
+          header.classList.add('bg-brand-dark-1', 'border-red-500', 'h-60px');
         } else {
           if (header.classList.contains('bg-brand-dark-1')) {
-            header.classList.remove('bg-brand-dark-1', 'border-red-500');
+            header.classList.remove(
+              'bg-brand-dark-1',
+              'border-red-500',
+              'h-60px'
+            );
             header.classList.add('bg-transparent');
           }
         }
