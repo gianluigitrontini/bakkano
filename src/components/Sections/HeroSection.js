@@ -85,6 +85,10 @@ function HeroSection() {
                       {item.description}
                     </p>
                   )}
+
+                  <button className='px-6 py-4 bg-red-600 hover:bg-red-700 cursor-pointer tracking-wide transition-colors duration-200 transform text-white focus:outline-none focus:bg-red-500 mr-auto'>
+                    I NOSTRI PRODOTTI
+                  </button>
                 </div>
               </Fade>
             </div>

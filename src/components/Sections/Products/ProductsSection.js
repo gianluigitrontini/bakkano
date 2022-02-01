@@ -1,6 +1,6 @@
 import React from 'react';
 import Product from './Product';
-import data from '../../../data.js';
+import { products } from '../../../data.js';
 import Badge from './Badge';
 
 const badges = {
@@ -40,7 +40,7 @@ function ProductsSection() {
 
         <ProductsSectionTitle title='Le Pinse' badge={badges.pinsePinsotto} />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
-          {data.products
+          {products
             .filter((item) => item.category === 'pinsa')
             .map((product, i) => {
               return <Product key={`product-${i}`} product={product} />;
@@ -49,7 +49,7 @@ function ProductsSection() {
 
         <ProductsSectionTitle title='I Pinsotti' badge={badges.pinsePinsotto} />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
-          {data.products
+          {products
             .filter((item) => item.category === 'pinsotti')
             .map((product, i) => {
               return <Product key={`product-${i}`} product={product} />;
@@ -61,7 +61,7 @@ function ProductsSection() {
           badge={badges.senzaGlutine}
         />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
-          {data.products
+          {products
             .filter((item) => item.category === 'senzaGlutine')
             .map((product, i) => {
               return <Product key={`product-${i}`} product={product} />;
@@ -70,7 +70,7 @@ function ProductsSection() {
 
         <ProductsSectionTitle title='Le Teglie' badge={badges.teglie} />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
-          {data.products
+          {products
             .filter((item) => item.category === 'teglie')
             .map((product, i) => {
               return <Product key={`product-${i}`} product={product} />;
@@ -82,7 +82,7 @@ function ProductsSection() {
           badge={badges.hamburgerPane}
         />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
-          {data.products
+          {products
             .filter((item) => item.category === 'hamburgers')
             .map((product, i) => {
               return <Product key={`product-${i}`} product={product} />;
@@ -91,7 +91,7 @@ function ProductsSection() {
 
         <ProductsSectionTitle title='Il Pane' badge={badges.hamburgerPane} />
         <div className='grid grid-cols-1 gap-y-8 lg:grid-cols-3 gap-x-8'>
-          {data.products
+          {products
             .filter((item) => item.category === 'pane')
             .map((product, i) => {
               return <Product key={`product-${i}`} product={product} />;

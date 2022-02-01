@@ -1,48 +1,10 @@
 import React from 'react';
-import Artigianale from '../../assets/images/section-perche-noi/icons/artigianali.png';
-import Vantaggi from '../../assets/images/section-perche-noi/icons/vantaggi.png';
-import Versatile from '../../assets/images/section-perche-noi/icons/versatile.png';
-import ImpastoNelForno from '../../assets/images/section-perche-noi/foto-impasto.jpg';
-import FotoPinsaCondita from '../../assets/images/section-perche-noi/foto-pinsa-condita-2.jpg';
-import FotoLocale from '../../assets/images/section-perche-noi/foto-locale.jpg';
+
+import { contenuto } from '../../data';
 
 import { Fade } from 'react-awesome-reveal';
 
 function PercheScegliereNoiSection() {
-  const whyOurProducts = [
-    {
-      image: ImpastoNelForno,
-      title: '100% Artigianali & Made in Italy',
-      icon: Artigianale,
-      text: [
-        'Ogni base è realizzata rigorosamente a mano',
-        'Utilizziamo solo farine Made in Italy e prodotti naturali',
-        'Garantiamo un prodotto sicuro e buono come appena sfornato',
-      ],
-    },
-    {
-      image: FotoPinsaCondita,
-      title: 'Versatile e pronta in 5 minuti',
-      icon: Versatile,
-      text: [
-        'Veloce da preparare perchè è una base già pronta',
-        'Perfetta da farcire come vuoi',
-        'Buona come appena sfornata. Per terminare la cottura servono solo 5 minuti in un qualsiasi forno sia professionale che casalingo',
-      ],
-    },
-    {
-      image: FotoLocale,
-      title: 'Tanti vantaggi per il tuo locale',
-      icon: Vantaggi,
-      text: [
-        'Offrire un prodotto di alta qualità senza assumere un pizzaiolo professionista',
-        'Effettuare anche piccoli ordini per evitare le eccedenze',
-        'Eliminare i costi di macchinari di produzione e della loro manutenzione',
-        'Rendere il tuo menù ancora più ricco e gustoso',
-      ],
-    },
-  ];
-
   const BlockWithBackgroundImage = ({ image, title, children }) => {
     return (
       <div className='flex flex-col mb-16'>
@@ -60,7 +22,11 @@ function PercheScegliereNoiSection() {
             </h3>
           </div>
         </div>
-        <div className='container flex-col lg:flex-row flex gap-32 my-16 text-center'>
+        <div
+          style={{
+            gridTemplateColumns: 'repeat(auto-fit, minmax(185px, 1fr))',
+          }}
+          className='container flex flex-col lg:grid gap-16 mt-40 mb-16 text-center'>
           {children}
         </div>
       </div>
@@ -79,14 +45,14 @@ function PercheScegliereNoiSection() {
       <div className='flex flex-col lg:flex-row items-center mt-16 lg:mt-24'>
         <div className='perchenoi_blocks-container flex flex-col gap-16 my-4 text-white w-full'>
           <Fade triggerOnce>
-            {whyOurProducts.map((block, i) => {
+            {contenuto.percheNoiSection.map((block, i) => {
               return (
                 <BlockWithBackgroundImage
                   image={block.image}
                   title={block.title}>
                   {block.text.map((sentence, i) => (
                     <div
-                      className={`lg:w-1/${block.text.length} transform translate-y-2/4 relative my-2 text-2xl border-4 border-red-500 text-white p-4 flex items-center justify-center`}
+                      className={`relative my-2 text-2xl border-4 border-red-500 text-white p-4 flex items-center justify-center`}
                       key={'sentence-' + i}>
                       {sentence}
                       <span className='absolute font-bold left-0 top-0 transform -translate-x-2/4 -translate-y-2/4 text-6xl'>

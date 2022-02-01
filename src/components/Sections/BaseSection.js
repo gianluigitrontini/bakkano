@@ -1,27 +1,27 @@
 import React from 'react';
-import ZeroConservanti from '../../assets/images/section-base/icons/0-conservanti.png';
-import IngredientiCertificati from '../../assets/images/section-base/icons/certified.png';
-import FattaAMano from '../../assets/images/section-base/icons/fatta-a-mano.png';
-import MixFarine from '../../assets/images/section-base/icons/mix-farine.png';
 
+import { contenuto } from '../../data';
 import { Fade } from 'react-awesome-reveal';
 
-// import BG from '../../assets/images/section-base/svg-bg-2.png';
 import BG from '../../assets/images/section-base/bg-bakkano-abstract.svg';
-import PlaceholderImage from '../../assets/images/section-base/placeholder-image.png';
 
 function BaseSection() {
   const ImageWithTextBlocks = ({ block, i }) => {
     const Image = ({ isSecond }) => {
       return (
-        <img
-          src={PlaceholderImage}
-          className={`object-cover lg:w-2/3 ${
-            isSecond && 'order-1 lg:order-2'
-          }`}
-          style={{ maxHeight: '450px' }}
-          alt={block.title}
-        />
+        <>
+          <img
+            src={block.image}
+            className={`object-cover h-[450px] lg:w-1/2 absolute w-full
+            ${isSecond ? 'right-0 order-1 lg:order-2' : 'left-0'}`}
+            alt={block.title}
+          />
+
+          <div
+            className={` w-2/3 h-[450px] ${
+              isSecond ? 'right-0 order-1 lg:order-2' : 'left-0'
+            }`}></div>
+        </>
       );
     };
     return (
@@ -31,10 +31,10 @@ function BaseSection() {
         {i % 2 === 1 && <Image />}
         <div className='lg:w-1/3 order-2 lg:order-1'>
           <img src={block.icon} className='h-16 mb-8' alt={block.title} />
-          <span className='block font-bold text-heading text-3xl'>
+          <span className='block font-bold text-heading text-3xl mb-8'>
             {block.title}
           </span>
-          <span className='block text-paragraph text-xl tracking-wide'>
+          <span className='block text-paragraph text-base tracking-wide'>
             {block.text}
           </span>
         </div>
@@ -42,37 +42,15 @@ function BaseSection() {
       </div>
     );
   };
-  const BaseCopy = [
-    {
-      title: 'Farine Selezionate',
-      text: 'Tutte le nostre Pinse vengono realizzate utilizzando un mix di farine selezionate: farine di frumento tenero, farina di riso, farina di soia, lievito madre, acqua e sale e lasciate lievitare tra le 48 e le 72 ore.',
-      icon: MixFarine,
-    },
-    {
-      title: 'Fatta a mano',
-      text: 'Ogni base viene spianata a mano in forma ovale dai nostri pinsaioli seguendo la tradizione artigianale della vera Pinsa Romana®, per un prodotto altamente digeribile, gustoso e fragrante.',
-      icon: FattaAMano,
-    },
-    {
-      title: 'Ingredienti Certificati',
-      text: 'Utilizziamo solo materie prime certificate che rispettano il protocollo di produzione. Questo ci permette di utilizzare il marchio Pinsa Romana® Originale.',
-      icon: IngredientiCertificati,
-    },
 
-    {
-      title: 'Zero Conservanti',
-      text: 'Le nostre basi artigianali sono fresche, non congelate e senza conservanti o additivi aggiunti. Per lasciare inalterato il gusto e la freschezza, dopo una rapida scottatura, le lasciamo raffreddare per poi conservarle in ATM. Per questo consigliamo di consumare il prodotto entro 50 giorni dal confezionamento.',
-      icon: ZeroConservanti,
-    },
-  ];
   return (
     <section
       id='la-base'
-      className='flex flex-col py-24 bg-brand-dark-1 z-10 relative'>
+      className='flex flex-col py-24 gradient-dark-background z-10 relative'>
       <div className='container z-10'>
-        <div className='w-full flex flex-col gap-16 text-white'>
+        <div className='w-full flex flex-col gap-40 text-white'>
           <Fade triggerOnce>
-            {BaseCopy.map((block, i) => {
+            {contenuto.baseSection.map((block, i) => {
               return (
                 <ImageWithTextBlocks
                   block={block}
@@ -86,7 +64,7 @@ function BaseSection() {
       </div>
       <img
         src={BG}
-        className='absolute z-0 top-0 left-0 right-0 w-full'
+        className='absolute z-0 top-0 left-0 right-0 w-full opacity-[0.3]'
         alt=''
       />
       <img

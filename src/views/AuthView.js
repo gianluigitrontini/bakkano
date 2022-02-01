@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../components/Global/Header';
-import data from '../data';
+import { users } from '../data';
 
 function AuthView() {
   const [authValue, setAuthValue] = useState({
@@ -11,10 +11,8 @@ function AuthView() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const user = data.users.find((user) => authValue.email === user.email);
-    const password = data.users.find(
-      (user) => authValue.password === user.password
-    );
+    const user = users.find((user) => authValue.email === user.email);
+    const password = users.find((user) => authValue.password === user.password);
     if (!user) {
       console.log('Utente non trovato');
     }

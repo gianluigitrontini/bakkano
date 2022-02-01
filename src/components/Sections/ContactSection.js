@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { contenuto } from '../../data';
 
 function ContactSection() {
   const [formValue, setFormValue] = useState({
@@ -7,31 +8,8 @@ function ContactSection() {
     message: '',
   });
 
-  const faqAccordion = [
-    {
-      title: 'Come posso effettuare un ordine?',
-      content:
-        'Se è il tuo primo ordine, contattaci tramite il form integrato oppure inviando una email a <span class="text-red-500 tracking-wide">ordini@bakkano.it</span>. Ti ricontatteremo via email o telefonicamente con tutti i dettagli necessari per creare il tuo account.',
-    },
-    {
-      title: "C'è una quantità minima?",
-      content: 'No.',
-    },
-    {
-      title:
-        'Sono un privato, posso ordinare i vostri prodotti tramite questa pagina web?',
-      content:
-        "Attualmente, il servizio é riservato ai possessori di un'attività con Partita IVA nel settore Ho.Re.Ca.",
-    },
-    {
-      title: 'Come posso avere più informazioni?',
-      content:
-        "Basta contattarci all'indirizzo email <span class='text-red-500 tracking-wide'>ordini@bakkano.it</span> oppure utilizzando il form integrato. Ti ricontatteremo al più presto!",
-    },
-  ];
-
   const [expanded, setExpanded] = useState(
-    new Array(faqAccordion.lenght).fill(0)
+    new Array(contenuto.contactAccordion.lenght).fill(0)
   );
   const setQuestionExpanded = (i) => {
     let tempExpanded = [...expanded];
@@ -117,7 +95,7 @@ function ContactSection() {
       <div className='container flex flex-col items-center lg:flex-row gap-12'>
         {Form()}
         <div className='flex flex-col lg:w-1/2'>
-          {faqAccordion.map((faq, i) => {
+          {contenuto.contactAccordion.map((faq, i) => {
             return (
               <div
                 key={`faq-accordion_${i}`}

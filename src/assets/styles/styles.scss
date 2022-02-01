@@ -11,32 +11,16 @@
 
 html {
   font-family: 'Oswald', sans-serif;
-  overflow-y: auto;
 }
 
 .container {
-  @screen xl {
-    @apply px-8 #{!important};
-    max-width: 1196px !important;
+  @apply mx-auto px-4;
+  width: 100%;
+  @screen md {
+    @apply px-4;
+
+    max-width: 1436px;
   }
-
-  @screen 2xl {
-    @apply px-12 #{!important};
-    max-width: 1536px !important;
-  }
-}
-
-html,
-body,
-#root {
-  min-height: 100vh;
-}
-
-body {
-  @apply flex flex-col bg-brand-dark-1;
-}
-#root {
-  @apply flex flex-col;
 }
 
 #hero {
@@ -49,15 +33,6 @@ body {
   }
 }
 
-.header-on-scroll {
-  @apply bg-brand-dark-1 bg-opacity-75 backdrop-blur border-white;
-}
-
-@supports (-moz-appearance: none) {
-  .header-on-scroll {
-    @apply bg-brand-dark-1 opacity-100;
-  }
-}
 .mt-header {
   margin-top: 80px;
 }
@@ -120,18 +95,6 @@ body {
   }
 }
 
-.text-heading {
-  font-size: 28px;
-  @screen lg {
-    font-size: 36px;
-  }
-}
-.text-paragraph {
-  font-size: 16px;
-  @screen lg {
-    font-size: 20px;
-  }
-}
-.text-span {
-  font-size: 14px;
+.gradient-dark-background {
+  background: linear-gradient(180deg, #323232 0%, #474747 45%, #323232);
 }

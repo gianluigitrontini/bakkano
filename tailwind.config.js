@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -27,6 +27,7 @@ module.exports = {
         'brand-brown': '#9c6d27',
         'brand-green': '#618a23',
         'brand-dark-1': '#323232',
+        'brand-dark-2': '#252525',
       },
       minWidth: {
         'fit-content': 'fit-content',
