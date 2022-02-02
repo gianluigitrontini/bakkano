@@ -55,7 +55,7 @@ function PercheScegliereNoiSection() {
           <Fade triggerOnce>
             <section className='flex flex-col lg:flex-row items-center gap-8'>
               <div className='lg:w-1/2 relative'>
-                <video autoPlay='autoplay' loop muted>
+                <video autoPlay='autoplay' playsInline loop muted>
                   <source src={PizzaVideo} type='video/mp4'></source>
                 </video>
                 <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-25'></div>
