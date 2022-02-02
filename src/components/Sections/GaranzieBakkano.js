@@ -14,8 +14,10 @@ function GaranzieBakkano() {
       {/* <div style={{ boxShadow: 'inset 0 0 30px rgba(0,0,0,0.35)' }}> */}
       <div>
         <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 py-8'>
-          {contenuto.garanzieSection.map((garanzia) => (
-            <div className='flex flex-col text-white text-center p-8 relative'>
+          {contenuto.garanzieSection.map((garanzia, i) => (
+            <div
+              className='flex flex-col text-white text-center p-8 relative'
+              key={i}>
               <div
                 style={{
                   background:

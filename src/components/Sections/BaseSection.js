@@ -30,10 +30,8 @@ function BaseSection() {
         {i % 2 === 1 && <Image />}
         <div className='lg:w-1/3 order-2 lg:order-1'>
           <img src={block.icon} className='h-16 mb-8' alt={block.title} />
-          <span className='block font-bold text-heading text-3xl mb-8'>
-            {block.title}
-          </span>
-          <span className='block text-paragraph text-base tracking-wide'>
+          <span className='block font-bold text-3xl mb-8'>{block.title}</span>
+          <span className='block font-light text-xl tracking-wide'>
             {block.text}
           </span>
         </div>
@@ -66,7 +64,7 @@ function BaseSection() {
       />
       <img
         src={BG}
-        className='absolute z-0 bottom-0 right-0 w-full object-contain object-right'
+        className='absolute z-0 bottom-0 right-0 w-full object-contain object-right opacity-[0.3]'
         style={{ height: '150vh' }}
         alt=''
       />
