@@ -59,7 +59,7 @@ function HeroSection() {
       return (
         <div
           key={`carousel-${item.slideId}`}
-          className={`border-b-4 border-red-500 absolute top-0 bottom-0 left-0 right-0 h-screen w-full w-full transition-opacity animate-zoom-slowly overflow-hidden fixed-image-background ${
+          className={`border-b-2 border-red-500 absolute top-0 bottom-0 left-0 right-0 h-screen w-full w-full transition-opacity animate-zoom-slowly overflow-hidden fixed-image-background ${
             slideNumber.toString() === item.slideId
               ? 'opacity-100 z-10'
               : 'opacity-0'

@@ -26,8 +26,8 @@ module.exports = {
       colors: {
         'brand-brown': '#9c6d27',
         'brand-green': '#618a23',
-        'brand-dark-1': '#1a1a1a',
-        'brand-dark-2': '#252525',
+        'brand-dark-1': '#111',
+        'brand-dark-2': '#111',
       },
       minWidth: {
         'fit-content': 'fit-content',

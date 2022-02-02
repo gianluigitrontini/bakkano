@@ -9,17 +9,17 @@ function Header() {
       document.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
           header.classList.remove('bg-transparent', 'border-transparent');
-          header.classList.add('bg-brand-dark-2', 'border-red-500', 'h-60px');
+          header.classList.add('bg-brand-dark-1', 'border-red-500', 'h-60px');
         } else {
           if (
             header.classList.contains(
-              'bg-brand-dark-2',
+              'bg-brand-dark-1',
               'border-red-500',
               'h-60px'
             )
           ) {
             header.classList.remove(
-              'bg-brand-dark-2',
+              'bg-brand-dark-1',
               'border-red-500',
               'h-60px'
             );

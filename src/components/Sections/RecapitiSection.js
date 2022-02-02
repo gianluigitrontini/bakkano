@@ -63,15 +63,21 @@ function RecapitiSection() {
       <div className='container flex justify-between flex-col lg:flex-row gap-8 items-center text-white'>
         <div className='flex flex-col lg:flex-row mx-auto gap-4 items-center'>
           <PhoneIcon className={'text-red-500 w-12 h-12'} />{' '}
-          <span className='text-2xl font-light'> +39 320 6688999 </span>
+          <span className='text-2xl font-light tracking-wider'>
+            {' '}
+            +39 320 6688999{' '}
+          </span>
         </div>
         <div className='flex flex-col lg:flex-row mx-auto gap-4 items-center'>
           <MailIcon className={'text-red-500 w-12 h-12'} />{' '}
-          <span className='text-2xl font-light'> ordini@bakkano.it </span>
+          <span className='text-2xl font-light tracking-wider'>
+            {' '}
+            ordini@bakkano.it{' '}
+          </span>
         </div>
         <div className='flex flex-col lg:flex-row mx-auto gap-4 items-center'>
           <LocationIcon className={'text-red-500 w-12 h-12'} />{' '}
-          <span className='text-2xl font-light'>
+          <span className='text-2xl font-light tracking-wider'>
             {' '}
             San Benedetto del Tronto{' '}
           </span>
