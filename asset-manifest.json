@@ -1,19 +1,17 @@
 {
   "files": {
     "main.css": "/bakkano/static/css/main.7a1169bf.css",
-    "main.js": "/bakkano/static/js/main.13675b12.js",
+    "main.js": "/bakkano/static/js/main.e65cf62d.js",
     "static/media/pizza-bg.mp4": "/bakkano/static/media/pizza-bg.3b8374a37ad296658a2b.mp4",
-    "static/media/perche-noi-pinsa-1.png": "/bakkano/static/media/perche-noi-pinsa-1.5d3832a772c64eda3888.png",
-    "static/media/hero-pinsa-farcita-1.jpg": "/bakkano/static/media/hero-pinsa-farcita-1.1484bfc66d6975386c56.jpg",
-    "static/media/hero-hamburger.jpg": "/bakkano/static/media/hero-hamburger.5b4f9dad792bee2ef40d.jpg",
-    "static/media/hero-hamburger-1.jpg": "/bakkano/static/media/hero-hamburger-1.31c7cf9e91e0ed8c5ede.jpg",
-    "static/media/hero-pinsa-farcita.jpg": "/bakkano/static/media/hero-pinsa-farcita.95b11cd38459166961c0.jpg",
+    "static/media/perche-noi-pinsa-1.png": "/bakkano/static/media/perche-noi-pinsa-1.1c40d7955c0b21f8cf47.png",
+    "static/media/hero-pinsa-farcita-1.jpg": "/bakkano/static/media/hero-pinsa-farcita-1.f0c394997020846c295e.jpg",
+    "static/media/hero-hamburger.jpg": "/bakkano/static/media/hero-hamburger.ca11c929d7c6fb7064da.jpg",
     "static/media/foto-locale.jpg": "/bakkano/static/media/foto-locale.8c4c6a274c04414f59cb.jpg",
     "static/media/foto-impasto.jpg": "/bakkano/static/media/foto-impasto.11f1d666f769172e4156.jpg",
+    "static/media/hero-hamburger-1.jpg": "/bakkano/static/media/hero-hamburger-1.ee52664d35dd0f81efd0.jpg",
+    "static/media/hero-pinsa-farcita.jpg": "/bakkano/static/media/hero-pinsa-farcita.e059749d2df5a7b1f564.jpg",
     "static/media/foto-pinsa-condita-2.jpg": "/bakkano/static/media/foto-pinsa-condita-2.8b8eee126d8cf08d1341.jpg",
-    "static/media/pizza-per-home-3-transparent.png": "/bakkano/static/media/pizza-per-home-3-transparent.7fea737f907d381ac9f5.png",
-    "static/media/pizza-per-home-1-transparent.png": "/bakkano/static/media/pizza-per-home-1-transparent.601fb285267619a22a15.png",
-    "static/media/pizza-per-home-2-transparent.png": "/bakkano/static/media/pizza-per-home-2-transparent.7f6f5429e10df8c5f50b.png",
+    "static/media/pinsa-certificata.png": "/bakkano/static/media/pinsa-certificata.f491b1cc8bafb925664e.png",
     "static/media/pinsotto-maxi-compressed.jpg": "/bakkano/static/media/pinsotto-maxi-compressed.9351e86c54980b6079b6.jpg",
     "static/media/pane-in-cassetta-compressed.jpg": "/bakkano/static/media/pane-in-cassetta-compressed.ac07cbf9db4683a8421d.jpg",
     "static/media/hamburger-compressed.jpg": "/bakkano/static/media/hamburger-compressed.974db804cd24b4597214.jpg",
@@ -23,17 +21,20 @@
     "static/media/tonda-romana-compressed.jpg": "/bakkano/static/media/tonda-romana-compressed.f0a0de2502c3ad7643a1.jpg",
     "static/media/teglia-romana-compressed.jpg": "/bakkano/static/media/teglia-romana-compressed.3abf57e1c38113b77ac2.jpg",
     "static/media/hamburger-mini-compressed.jpg": "/bakkano/static/media/hamburger-mini-compressed.5778de513130f7ee0af4.jpg",
+    "static/media/pizza-per-home-3-transparent.png": "/bakkano/static/media/pizza-per-home-3-transparent.6aecba030aae1ae10ef0.png",
+    "static/media/pizza-per-home-1-transparent.png": "/bakkano/static/media/pizza-per-home-1-transparent.e8686b1fc5baf0c57efc.png",
     "static/media/pinsa-romana-mini-compressed.jpg": "/bakkano/static/media/pinsa-romana-mini-compressed.61a64cbaf3ae590f5050.jpg",
+    "static/media/pizza-per-home-2-transparent.png": "/bakkano/static/media/pizza-per-home-2-transparent.cd486a0054a937ab4179.png",
     "static/media/pinsotto-mini-compressed.jpg": "/bakkano/static/media/pinsotto-mini-compressed.bc88a9de5269114a820a.jpg",
     "static/media/teglia-romana-mezza-compressed.jpg": "/bakkano/static/media/teglia-romana-mezza-compressed.0215cdd00ddde2208f85.jpg",
     "static/media/windi_lestari.ttf": "/bakkano/static/media/windi_lestari.04d270181f17869116fd.ttf",
     "index.html": "/bakkano/index.html",
     "static/media/bg-bakkano-abstract.svg": "/bakkano/static/media/bg-bakkano-abstract.e9bd22f0b7ad66e2f293bce8dc05a998.svg",
     "main.7a1169bf.css.map": "/bakkano/static/css/main.7a1169bf.css.map",
-    "main.13675b12.js.map": "/bakkano/static/js/main.13675b12.js.map"
+    "main.e65cf62d.js.map": "/bakkano/static/js/main.e65cf62d.js.map"
   },
   "entrypoints": [
     "static/css/main.7a1169bf.css",
-    "static/js/main.13675b12.js"
+    "static/js/main.e65cf62d.js"
   ]
 }
