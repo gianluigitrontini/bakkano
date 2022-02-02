@@ -26,10 +26,11 @@ import IngredientiCertificati from './assets/images/section-base/icons/certified
 import FattaAMano from './assets/images/section-base/icons/fatta-a-mano.png';
 import MixFarine from './assets/images/section-base/icons/mix-farine.png';
 
-// Base Section
+// Garanzie Section
 import Pinsa1 from './assets/images/section-garanzie/pizza-per-home-1-transparent.png';
 import Pinsa2 from './assets/images/section-garanzie/pizza-per-home-2-transparent.png';
 import Pinsa3 from './assets/images/section-garanzie/pizza-per-home-3-transparent.png';
+import PinsaCertificata from './assets/images/section-garanzie/pinsa-certificata.png';
 
 const products = [
   {
@@ -551,8 +552,7 @@ const contenuto = {
   ],
   garanzieSection: [
     {
-      image:
-        'https://www.pinsaromana.info/wp-content/uploads/2015/09/AssociazioneBollino.png',
+      image: PinsaCertificata,
       titolo: 'La Pinsa Originale',
       contenuto:
         "Siamo certificati al 100%. Quella che finisce sulla tua tavola è l'autentica Pinsa Romana.",
