@@ -86,9 +86,7 @@ function ContactSection() {
     );
   };
   return (
-    <section
-      id='contattaci'
-      className='flex flex-col bg-brand-dark-1 z-10 py-16'>
+    <section id='contattaci' className='flex flex-col z-10 py-16'>
       <div className='container w-full flex flex-col text-center md:text-left md:flex-row items-center mb-16'>
         <h1 className='main-title text-3xl lg:text-7xl uppercase text-white font-bold tracking-wide w-fit-content lg:pr-8'>
           Contattaci

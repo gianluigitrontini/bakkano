@@ -46,9 +46,7 @@ function PercheScegliereNoiSection() {
     </div>
   );
   return (
-    <section
-      id='perche-scegliere-noi'
-      className='flex flex-col bg-brand-dark-1 z-10 '>
+    <section id='perche-scegliere-noi' className='flex flex-col z-10 '>
       <SectionHeading />
       <div className='flex flex-col lg:flex-row items-center mt-16 lg:mt-24'>
         <div className='perchenoi_blocks-container flex flex-col gap-36 lg:gap-56 my-4 text-white w-full'>

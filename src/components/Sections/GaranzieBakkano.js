@@ -3,7 +3,7 @@ import { contenuto } from '../../data';
 
 function GaranzieBakkano() {
   return (
-    <section id='garanzie-bakkano' className='bg-brand-dark-1 py-16'>
+    <section id='garanzie-bakkano' className='py-16'>
       <div className='container mx-auto pt-8 pb-16 flex flex-col gap-8 lg:gap-0 lg:flex-row items-center'>
         <span className='border-b-2 border-red-500 w-1/2'></span>
         <h1 className='main-title text-3xl uppercase text-white font-bold tracking-wide w-full text-center'>

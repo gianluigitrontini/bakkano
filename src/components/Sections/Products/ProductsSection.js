@@ -40,9 +40,7 @@ function ProductsSection() {
     );
   };
   return (
-    <section
-      id='i-nostri-prodotti'
-      className='flex flex-col py-16 z-10 bg-brand-dark-1'>
+    <section id='i-nostri-prodotti' className='flex flex-col py-16 z-10'>
       <div className='container'>
         <SectionHeading />
         {/* Is this repeatable? */}
