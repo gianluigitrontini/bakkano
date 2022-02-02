@@ -25,6 +25,7 @@ import ZeroConservanti from './assets/images/section-base/icons/0-conservanti.pn
 import IngredientiCertificati from './assets/images/section-base/icons/certified.png';
 import FattaAMano from './assets/images/section-base/icons/fatta-a-mano.png';
 import MixFarine from './assets/images/section-base/icons/mix-farine.png';
+import PinsaPlaceholder from './assets/images/section-base/pinsa-placeholder.jpg';
 
 // Garanzie Section
 import Pinsa1 from './assets/images/section-garanzie/pizza-per-home-1-transparent.png';
@@ -521,30 +522,26 @@ const contenuto = {
   ],
   baseSection: [
     {
-      image:
-        'https://bakkanoinviamanara.com/wp-content/uploads/2016/11/DSC_0499-750x500.jpg',
+      image: PinsaPlaceholder,
       title: 'Farine Selezionate',
       text: 'Tutte le nostre Pinse vengono realizzate utilizzando un mix di farine selezionate: farine di frumento tenero, farina di riso, farina di soia, lievito madre, acqua e sale e lasciate lievitare tra le 48 e le 72 ore.',
       icon: MixFarine,
     },
     {
-      image:
-        'https://bakkanoinviamanara.com/wp-content/uploads/2016/11/DSC_0499-750x500.jpg',
+      image: PinsaPlaceholder,
       title: 'Fatta a mano',
       text: 'Ogni base viene spianata a mano in forma ovale dai nostri pinsaioli seguendo la tradizione artigianale della vera Pinsa Romana®, per un prodotto altamente digeribile, gustoso e fragrante.',
       icon: FattaAMano,
     },
     {
-      image:
-        'https://bakkanoinviamanara.com/wp-content/uploads/2016/11/DSC_0499-750x500.jpg',
+      image: PinsaPlaceholder,
       title: 'Ingredienti Certificati',
       text: 'Utilizziamo solo materie prime certificate che rispettano il protocollo di produzione. Questo ci permette di utilizzare il marchio Pinsa Romana® Originale.',
       icon: IngredientiCertificati,
     },
 
     {
-      image:
-        'https://bakkanoinviamanara.com/wp-content/uploads/2016/11/DSC_0499-750x500.jpg',
+      image: PinsaPlaceholder,
       title: 'Zero Conservanti',
       text: 'Le nostre basi artigianali sono fresche, non congelate e senza conservanti o additivi aggiunti. Per lasciare inalterato il gusto e la freschezza, dopo una rapida scottatura, le lasciamo raffreddare per poi conservarle in ATM. Per questo consigliamo di consumare il prodotto entro 50 giorni dal confezionamento.',
       icon: ZeroConservanti,
