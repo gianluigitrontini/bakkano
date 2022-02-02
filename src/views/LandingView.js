@@ -7,12 +7,14 @@ import GaranzieBakkano from '../components/Sections/GaranzieBakkano';
 import HeroSection from '../components/Sections/HeroSection';
 import PercheScegliereNoiSection from '../components/Sections/PercheScegliereNoiSection';
 import ProductsSection from '../components/Sections/Products/ProductsSection';
+import RecapitiSection from '../components/Sections/RecapitiSection';
 
 function LandingView() {
   return (
     <>
       <Header />
       <HeroSection />
+      <RecapitiSection />
       <BaseSection />
       <GaranzieBakkano />
       <PercheScegliereNoiSection />

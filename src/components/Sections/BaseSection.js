@@ -16,7 +16,6 @@ function BaseSection() {
             ${isSecond ? 'right-0 order-1 lg:order-2' : 'left-0'}`}
             alt={block.title}
           />
-
           <div
             className={` w-2/3 h-[450px] ${
               isSecond ? 'right-0 order-1 lg:order-2' : 'left-0'
@@ -44,9 +43,7 @@ function BaseSection() {
   };
 
   return (
-    <section
-      id='la-base'
-      className='flex flex-col py-24 gradient-dark-background z-10 relative'>
+    <section id='la-base' className='flex flex-col py-24  z-10 relative'>
       <div className='container z-10'>
         <div className='w-full flex flex-col gap-40 text-white'>
           <Fade triggerOnce>

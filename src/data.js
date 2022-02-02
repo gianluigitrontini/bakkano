@@ -26,6 +26,11 @@ import IngredientiCertificati from './assets/images/section-base/icons/certified
 import FattaAMano from './assets/images/section-base/icons/fatta-a-mano.png';
 import MixFarine from './assets/images/section-base/icons/mix-farine.png';
 
+// Base Section
+import Pinsa1 from './assets/images/section-garanzie/pizza-per-home-1-transparent.png';
+import Pinsa2 from './assets/images/section-garanzie/pizza-per-home-2-transparent.png';
+import Pinsa3 from './assets/images/section-garanzie/pizza-per-home-3-transparent.png';
+
 const products = [
   {
     name: 'Pinsa Romana',
@@ -547,28 +552,26 @@ const contenuto = {
   garanzieSection: [
     {
       image:
-        'https://bakkanoinviamanara.com/wp-content/uploads/2015/07/fotopiccoleperhome1.jpg',
-      titolo: 'Ingredienti Freschi',
-      contenuto:
-        'Utilizziamo solo ingredienti certificati e naturali. La nostra attenzione verso il cliente fa sì che tutti la amino - vegani e celiaci inclusi.',
-    },
-    {
-      image:
         'https://www.pinsaromana.info/wp-content/uploads/2015/09/AssociazioneBollino.png',
       titolo: 'La Pinsa Originale',
       contenuto:
         "Siamo certificati al 100%. Quella che finisce sulla tua tavola è l'autentica Pinsa Romana.",
     },
     {
-      image:
-        'https://bakkanoinviamanara.com/wp-content/uploads/2015/07/pinsapersito-1-280x162.jpg',
+      image: Pinsa1,
+      titolo: 'Ingredienti Freschi',
+      contenuto:
+        'Utilizziamo solo ingredienti certificati e naturali. La nostra attenzione verso il cliente fa sì che tutti la amino - vegani e celiaci inclusi.',
+    },
+
+    {
+      image: Pinsa2,
       titolo: 'Zero Sprechi',
       contenuto:
         "Ordina solo quello che ti serve, quando vuoi tu. Le nostre Pinse hanno un'ottima conservazione - ma non troppo a lungo, per garantirti la freschezza dei nostri prodotti.",
     },
     {
-      image:
-        'https://bakkanoinviamanara.com/wp-content/uploads/2015/07/fotopiccolepermail3.jpg',
+      image: Pinsa3,
       titolo: 'La Qualità prima di tutto',
       contenuto:
         'I nostri prodotti sono amati in tutta Italia. Anni di passione ci hanno permesso di creare un prodotto estremamente versatile e salutare.',

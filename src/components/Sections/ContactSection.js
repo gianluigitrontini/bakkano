@@ -31,6 +31,7 @@ function ContactSection() {
           <label htmlFor='contact-email' className='w-full'>
             <span className='block text-white mb-2'>Email</span>
             <input
+              placeholder='Inserisci la tua email...'
               value={formValue.email}
               onChange={(e) =>
                 setFormValue({ ...formValue, email: e.target.value })
@@ -48,6 +49,7 @@ function ContactSection() {
             </div>
             <input
               value={formValue.name}
+              placeholder='Inserisci il nome della tua azienda...'
               onChange={(e) =>
                 setFormValue({ ...formValue, name: e.target.value })
               }
@@ -64,12 +66,14 @@ function ContactSection() {
             <span className='text-red-500 text-xs ml-2'>opzionale</span>
           </div>
           <textarea
+            placeholder='Scrivi il tuo messaggio...'
             onChange={(e) =>
               setFormValue({ ...formValue, message: e.target.value })
             }
             value={formValue.message}
             className='w-full p-2'
             id='contact-message'
+            rows='4'
           />
         </label>
 

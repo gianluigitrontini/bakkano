@@ -8,16 +8,22 @@ function Header() {
       const header = document.querySelector('header');
       document.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-          header.classList.remove('bg-transparent');
-          header.classList.add('bg-brand-dark-1', 'border-red-500', 'h-60px');
+          header.classList.remove('bg-transparent', 'border-transparent');
+          header.classList.add('bg-brand-dark-2', 'border-red-500', 'h-60px');
         } else {
-          if (header.classList.contains('bg-brand-dark-1')) {
+          if (
+            header.classList.contains(
+              'bg-brand-dark-2',
+              'border-red-500',
+              'h-60px'
+            )
+          ) {
             header.classList.remove(
-              'bg-brand-dark-1',
+              'bg-brand-dark-2',
               'border-red-500',
               'h-60px'
             );
-            header.classList.add('bg-transparent');
+            header.classList.add('bg-transparent', 'border-transparent');
           }
         }
       });
@@ -25,7 +31,7 @@ function Header() {
   }, []);
 
   return (
-    <header className='fixed top-0 h-header bg-transparent z-50 w-full py-4 transition-all border-b-2 border-transparent duration-700 flex items-center '>
+    <header className='fixed top-0 h-header bg-transparent z-50 w-full py-4 transition-all border-b border-transparent duration-700 flex items-center '>
       <div className='container mx-auto flex justify-between items-center'>
         <Logo />
         <nav>
@@ -45,7 +51,6 @@ function Header() {
           </ul>
         </nav>
       </div>
-      <div className='opacity-0 transition-all dashed-background w-full absolute bottom-0 h-4'></div>
     </header>
   );
 }
