@@ -14,10 +14,20 @@ html {
 }
 
 body {
-  // @apply bg-brand-dark-1;
-  background-image: url('https://www.elegantthemes.com/layouts/wp-content/uploads/2020/11/pizzeria_76.jpg');
-  background-attachment: fixed;
-  background-size: cover;
+  @apply bg-brand-dark-1;
+
+  &:before {
+    content: '';
+    position: fixed;
+    background-image: url('https://www.elegantthemes.com/layouts/wp-content/uploads/2020/11/pizzeria_76.jpg');
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+  }
 }
 
 .container {

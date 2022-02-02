@@ -58,15 +58,15 @@ function PercheScegliereNoiSection() {
                 </video>
                 <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-25'></div>
               </div>
-              <div className='lg:w-1/2 p-4 text-center lg:text-left'>
+              <div className='lg:w-1/3 p-4 text-center lg:text-left'>
                 <Ornament className='mb-8 opacity-[0.5] mx-auto lg:ml-0' />
 
-                {/* <h2 className='text-3xl mb-8'>I nostri punti di forza</h2> */}
+                <h2 className='text-3xl mb-8 lg:text-left'>
+                  100% Artigianali & Made in Italy
+                </h2>
                 <p className='text-2xl font-light mb-4'>
-                  Ogni base è realizzata rigorosamente a mano.
-                </p>
-                <p className='text-2xl font-light mb-4'>
-                  Utilizziamo solo farine Made in Italy e prodotti naturali.
+                  Ogni base è realizzata rigorosamente a mano, utilizzando solo
+                  farine Made in Italy e prodotti naturali.
                 </p>
                 <p className='text-2xl font-light'>
                   Garantiamo un prodotto sicuro e buono come appena sfornato.
