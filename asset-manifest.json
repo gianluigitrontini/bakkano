@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bakkano/static/css/main.7a1169bf.css",
-    "main.js": "/bakkano/static/js/main.e65cf62d.js",
+    "main.css": "/bakkano/static/css/main.7b258c25.css",
+    "main.js": "/bakkano/static/js/main.336ea0f1.js",
     "static/media/pizza-bg.mp4": "/bakkano/static/media/pizza-bg.3b8374a37ad296658a2b.mp4",
     "static/media/perche-noi-pinsa-1.png": "/bakkano/static/media/perche-noi-pinsa-1.1c40d7955c0b21f8cf47.png",
     "static/media/hero-pinsa-farcita-1.jpg": "/bakkano/static/media/hero-pinsa-farcita-1.f0c394997020846c295e.jpg",
@@ -9,9 +9,12 @@
     "static/media/foto-locale.jpg": "/bakkano/static/media/foto-locale.8c4c6a274c04414f59cb.jpg",
     "static/media/foto-impasto.jpg": "/bakkano/static/media/foto-impasto.11f1d666f769172e4156.jpg",
     "static/media/hero-hamburger-1.jpg": "/bakkano/static/media/hero-hamburger-1.ee52664d35dd0f81efd0.jpg",
+    "static/media/bakkano-ristoranti-bg.jfif": "/bakkano/static/media/bakkano-ristoranti-bg.27232825a66b33e5d6b1.jfif",
     "static/media/hero-pinsa-farcita.jpg": "/bakkano/static/media/hero-pinsa-farcita.e059749d2df5a7b1f564.jpg",
+    "static/media/pizzeria-bg.jpg": "/bakkano/static/media/pizzeria-bg.b02975025e27bbf5b25f.jpg",
     "static/media/foto-pinsa-condita-2.jpg": "/bakkano/static/media/foto-pinsa-condita-2.8b8eee126d8cf08d1341.jpg",
     "static/media/pinsa-certificata.png": "/bakkano/static/media/pinsa-certificata.f491b1cc8bafb925664e.png",
+    "static/media/pinsa-placeholder.jpg": "/bakkano/static/media/pinsa-placeholder.6d009a365ad1f1a168cd.jpg",
     "static/media/pinsotto-maxi-compressed.jpg": "/bakkano/static/media/pinsotto-maxi-compressed.9351e86c54980b6079b6.jpg",
     "static/media/pane-in-cassetta-compressed.jpg": "/bakkano/static/media/pane-in-cassetta-compressed.ac07cbf9db4683a8421d.jpg",
     "static/media/hamburger-compressed.jpg": "/bakkano/static/media/hamburger-compressed.974db804cd24b4597214.jpg",
@@ -30,11 +33,11 @@
     "static/media/windi_lestari.ttf": "/bakkano/static/media/windi_lestari.04d270181f17869116fd.ttf",
     "index.html": "/bakkano/index.html",
     "static/media/bg-bakkano-abstract.svg": "/bakkano/static/media/bg-bakkano-abstract.e9bd22f0b7ad66e2f293bce8dc05a998.svg",
-    "main.7a1169bf.css.map": "/bakkano/static/css/main.7a1169bf.css.map",
-    "main.e65cf62d.js.map": "/bakkano/static/js/main.e65cf62d.js.map"
+    "main.7b258c25.css.map": "/bakkano/static/css/main.7b258c25.css.map",
+    "main.336ea0f1.js.map": "/bakkano/static/js/main.336ea0f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a1169bf.css",
-    "static/js/main.e65cf62d.js"
+    "static/css/main.7b258c25.css",
+    "static/js/main.336ea0f1.js"
   ]
 }
