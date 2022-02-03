@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bakkano/static/css/main.7b258c25.css",
-    "main.js": "/bakkano/static/js/main.336ea0f1.js",
+    "main.js": "/bakkano/static/js/main.9ba9c1de.js",
     "static/media/pizza-bg.mp4": "/bakkano/static/media/pizza-bg.3b8374a37ad296658a2b.mp4",
     "static/media/perche-noi-pinsa-1.png": "/bakkano/static/media/perche-noi-pinsa-1.1c40d7955c0b21f8cf47.png",
     "static/media/hero-pinsa-farcita-1.jpg": "/bakkano/static/media/hero-pinsa-farcita-1.f0c394997020846c295e.jpg",
@@ -34,10 +34,10 @@
     "index.html": "/bakkano/index.html",
     "static/media/bg-bakkano-abstract.svg": "/bakkano/static/media/bg-bakkano-abstract.e9bd22f0b7ad66e2f293bce8dc05a998.svg",
     "main.7b258c25.css.map": "/bakkano/static/css/main.7b258c25.css.map",
-    "main.336ea0f1.js.map": "/bakkano/static/js/main.336ea0f1.js.map"
+    "main.9ba9c1de.js.map": "/bakkano/static/js/main.9ba9c1de.js.map"
   },
   "entrypoints": [
     "static/css/main.7b258c25.css",
-    "static/js/main.336ea0f1.js"
+    "static/js/main.9ba9c1de.js"
   ]
 }
