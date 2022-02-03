@@ -51,7 +51,7 @@ function HeroSection() {
         } else {
           setSlideNumber((slideNumber) => slideNumber + 1);
         }
-      }, 4500);
+      }, 6000);
       return () => clearInterval(interval);
     }, []);
 
