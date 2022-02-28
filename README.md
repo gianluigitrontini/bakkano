@@ -1,3 +1,3 @@
 # Bakkano
 
-![Bakkano Landing Page](https://github.com/gianluigitrontini/preview-images/blob/main/bakkano/bakkano-desktop.png?raw=true)
+![Bakkano Landing Page](https://raw.githubusercontent.com/gianluigitrontini/preview-images/main/bakkano/bakkano-capture-for-github.png)
